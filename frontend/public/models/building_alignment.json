@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "grid": {
+    "width": 10,
+    "height": 10,
+    "cell_size": 1.0,
+    "origin": [0.0, 0.0, 0.0],
+    "axes": {
+      "right": [1.0, 0.0, 0.0],
+      "forward": [0.0, 0.0, 1.0],
+      "up": [0.0, 1.0, 0.0]
+    }
+  },
+  "model": {
+    "offset": [0.0, 0.0, 0.0],
+    "scale": 1.0,
+    "rotation_y_deg": 0.0,
+    "bounds": {
+      "min": [0.0, 0.0, 0.0],
+      "max": [10.0, 6.0, 10.0]
+    }
+  },
+  "anchors": [
+    {
+      "id": "grid_origin",
+      "grid": [0, 0],
+      "world": [0.0, 0.0, 0.0]
+    },
+    {
+      "id": "exitA_center",
+      "grid": [9.5, 5.0],
+      "world": [9.5, 0.0, 5.0]
+    }
+  ]
+}

@@ -116,6 +116,75 @@
 
 ---
 
+# 🚀 本地快速开始（Local Quickstart）
+
+> 本项目默认在本机运行，无需部署远程环境。以下步骤在 macOS 与 Ubuntu 上已经验证。
+
+## 1. 环境准备
+- 安装 [uv](https://docs.astral.sh/uv/) 并确保满足 Python 3.11 环境。
+- 安装 [Bun](https://bun.sh/) ≥ 1.2.23。
+- （可选）若需编译 `python-rvo2`，请提前安装系统编译工具（macOS: `xcode-select --install`，Ubuntu: `sudo apt install build-essential cmake`）。
+
+## 2. 同步依赖
+```bash
+# 后端依赖
+uv sync
+
+# 前端依赖
+cd frontend
+bun install
+```
+
+## 3. 启动服务
+1. 手动启动：
+   ```bash
+   # 终端 A - 后端
+   uv run uvicorn backend.app.main:app --reload
+
+   # 终端 B - 前端
+   cd frontend
+   bun dev --host
+   ```
+   默认后端监听 `http://127.0.0.1:8000`，前端 `http://127.0.0.1:5173`。
+
+2. 一键脚本（推荐）：
+   - macOS: `./start_macos.sh`
+   - Ubuntu: `./start_ubuntu.sh`
+
+   脚本会自动检测/安装缺失的 Python、uv、Bun、Node.js 及 RVO2 避障库（先从 `third_party/python-rvo2` 本地源码安装，失败再尝试联网；首次运行可能提示输入管理员密码），并在根目录创建 `logs/` 文件夹实时输出前后端日志。
+
+3. 停止服务：按 `Ctrl+C` 或终止脚本即可，日志保留在 `logs/backend.log` 与 `logs/frontend.log`。
+
+## 4. 验证运行
+- 访问前端页面，点击「启动仿真」查看 Three.js 场景与实时状态面板。
+- 若需联调测试，可执行 `python scripts/integration_runner.py`。
+- 极端场景压力测试：`python scripts/stress_probe.py`。
+
+---
+
+# 🧩 配置要点（Configuration Highlights）
+
+| 文件 | 作用 | 关键字段 |
+|------|------|----------|
+| `backend/app/data/config/simulation.yaml` | 仿真主配置 | `sim.tick_hz`、`agents.speed.mean/std`、`fire.diffusion_decay`、`map.file` |
+| `backend/app/data/maps/demo_map.json` | 占据栅格 | `width`、`height`、`cellSize`、`exits` |
+| `frontend/public/models/building_alignment.json` | 前后端坐标对齐 | `grid.*`、`model.offset/scale/rotation_y_deg`、`anchors` |
+| `.env.example` | 前后端共享的环境变量模板 | `VITE_BACKEND_URL` 等 |
+
+> 修改配置后可直接重启后端；`load_simulation_config` 支持热加载校验，详见 `backend/tests/test_config_hot_reload.py`。
+
+---
+
+# 🛠️ 扩展路线（Extension Roadmap）
+
+1. **算法增强**：引入更高阶的群体行为模型（Social Force、APSO-FD），并补充对应测试。
+2. **多楼层/多出口**：扩展 `demo_map.json` 结构，搭配 `building_alignment.json` 对齐多层模型。
+3. **联调自动化**：在 `scripts/stress_probe.py` 基础上扩展更多场景，并接入 CI 统计。
+4. **部署脚本**：可在现有一键启动脚本上添加 Docker / systemd 模式，支持远程部署。
+5. **用户手册升级**：结合真实建筑 glTF 模型，形成针对不同角色（建模、运维、演示）的多份指南。
+
+---
+
 # 🎯 二、项目目标与意义（Objectives & Significance）
 ### 1. 研究目标
 * 构建一个**可交互的建筑火灾疏散仿真环境**；
@@ -345,35 +414,49 @@ bun run dev
 ⠀
 ## 配置文件（backend/app/data/config/simulation.yaml）
 最小字段建议：
+
+```yaml
 sim:
-  tick_hz: 20            # 仿真步频（10~30推荐）
-  max_agents: 1000
+  mode: fixed             # fixed | random | manual
+  tick_hz: 20             # 仿真步频（10~30 推荐）
+  avoidance_strategy: rvo2
   seed: 42
 
 fire:
-  mode: fixed            # fixed | random | manual
+  mode: fixed
+  diffusion_decay: 0.92   # 火焰邻域每格的衰减系数
   fixed_points:
-    - [2.0, 0.0, 3.0]    # (x,y,z)，Three.js采用Y为高度
+    - position: [2.0, 0.0, 3.0]
+      intensity: 1.0
+    - position: [7.5, 0.0, 6.0]
+      intensity: 0.8
   random:
-    count: 1
-    radius: 5.0
+    count: 2
+    radius: 4.0
+    intensity_range: [0.6, 1.2]
 
 map:
   file: backend/app/data/maps/demo_map.json
-  cell_size: 0.5         # 米/格
+  cell_size: 1.0
   origin: [0.0, 0.0, 0.0]
 
 agents:
   count: 200
-  speed_mean: 1.3        # m/s
-  speed_std: 0.2
-  start_region: "hall"   # 可用region名或坐标范围
+  speed:
+    mean: 1.3             # m/s
+    std: 0.2
+  start_region:
+    - id: lobby
+      rect: [1, 1, 4, 3]
   goal_regions: ["exitA", "exitB"]
 
 costs:
   base: 1.0
-  fire_inflate: 10.0     # 火点附近代价增量
-  smoke_penalty: 0.5     # 可选：结合FDS输出时使用
+  fire_weight: 3.0
+  congestion_weight: 1.2
+  distance_weight: 1.0
+  exit_bonus: 0.5
+```
 
 ## 地图与数据文件（demo_map.json）
 用于后端 A* 的简化占据栅格或节点图（与前端 glTF 的平面对齐）。建议结构（示例）：
@@ -403,18 +486,30 @@ costs:
 *
 * POST /sim/replan **请求体**： { "session_id": "abc123", "fires": [[4.5,0.0,6.0]], "reason": "new_hazard" }
 *  **响应**：{ "ok": true }
-* GET /sim/status?session_id=abc123 → 返回运行状态（人数、平均速度、阻塞率等）。
+* GET /sim/status?session_id=abc123 → 返回运行状态（人数、平均速度、阻塞率、tick 配置、火焰扩散系数等）。
 * POST /sim/stop → 结束会话，释放资源。
 
 ⠀WebSocket
 * GET /ws/sim/{session_id} **服务端推送帧（示例）**： {
-* "type": "state",
-* "t": 12.35,
-* "agents": [
-* { "id": 1, "pos": [1.2,0.0,3.4], "vel": [0.8,0.0,0.1] },
-* { "id": 2, "pos": [1.0,0.0,3.1], "vel": [0.7,0.0,0.2] }
-* ],
-* "fires": [[2.0,0.0,3.0]]
+*   "type": "state",
+*   "tick": 120,
+*   "tick_hz": 20,
+*   "agents": [
+*     { "id": 1, "position": [1.2,0.0,3.4], "velocity": [0.8,0.0,0.1] },
+*     { "id": 2, "position": [1.0,0.0,3.1], "velocity": [0.7,0.0,0.2] }
+*   ],
+*   "fires": [
+*     { "position": [2.0, 0.0, 3.0], "intensity": 1.0 }
+*   ],
+*   "stats": {
+*     "agent_count": 180,
+*     "active_agents": 172,
+*     "average_speed": 1.25,
+*     "congestion_ratio": 0.86,
+*     "speed_mean": 1.3,
+*     "speed_std": 0.2,
+*     "fire_decay": 0.92
+*   }
 * }
 *  其他类型：hello、end、error。
 
@@ -500,4 +595,3 @@ LOG_LEVEL=INFO
 1 后端：FastAPI 入口、/sim/start、/sim/replan、/ws/sim/{id}；A* 的 planner.py、RVO2 封装 rvo.py、fire.py 代价场、grid.py 地图装载；读取 simulation.yaml；uv run uvicorn ... 运行。
 2 前端：Vite + Vue + TS + Three.js；创建 SceneCanvas.vue、src/three/scene.ts、agents.ts、paths.ts、fire.ts；WS 连接后渲染代理、路径与火点。
 3 保持坐标系约定（后端 (x,y) → 前端 (x,z)），并提供最小示例数据 demo_map.json 与 simulation.yaml。
-

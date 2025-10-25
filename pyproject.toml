@@ -1,0 +1,39 @@
+[project]
+name = "fire-evac-sim"
+version = "0.1.0"
+description = "Fire evacuation simulation backend"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.120.0",
+    "numpy>=2.3.4",
+    "pydantic>=2.12.3",
+    "pyyaml>=6.0.3",
+    "uvicorn>=0.38.0",
+]
+
+[dependency-groups]
+dev = [
+    "black==24.10.0",
+    "httpx>=0.28.1",
+    "pytest==8.3.4",
+    "ruff==0.7.3",
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-q"
+testpaths = ["backend/tests"]
+pythonpath = ["backend"]

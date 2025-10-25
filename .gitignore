@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.venv/
+.env
+
+# uv
+.uv/
+uv.lock
+
+# Node/Bun
+node_modules/
+frontend/node_modules/
+frontend/.bun/
+.bun
+bun.lockb
+
+# Build outputs
+backend/dist/
+frontend/dist/
+*.log
+
+# macOS
+.DS_Store
+
+# VSCode / IDE
+.vscode/
+.idea/
