@@ -12,7 +12,7 @@ export function createPathLayer(): THREE.Group {
 export function updatePaths(group: THREE.Group, paths: number[][][]): void {
   group.clear();
   paths.forEach((path) => {
-    const points = path.map(([x, y, z]) => new THREE.Vector3(x, y, z));
+    const points = path.map(([x, y, z]) => new THREE.Vector3(x, y + 0.05, z));
     const geometry = new THREE.BufferGeometry().setFromPoints(points);
     const material = new THREE.LineBasicMaterial({ color: 0x22c55e });
     const line = new THREE.Line(geometry, material);

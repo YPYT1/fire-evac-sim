@@ -2,9 +2,8 @@
  * GLB 模型加载工具，附带坐标对齐。
  */
 import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { Canteen } from './models/Canteen';
 
-const MODEL_PATH = '/models/building.glb';
 const ALIGNMENT_PATH = '/models/building_alignment.json';
 
 interface AlignmentMeta {
@@ -17,18 +16,12 @@ interface AlignmentMeta {
 }
 
 export async function loadBuilding(): Promise<THREE.Group> {
-  const loader = new GLTFLoader();
-  const [gltf, alignment] = await Promise.all([
-    loader.loadAsync(MODEL_PATH),
-    loadAlignmentMeta(),
-  ]);
-
-  const model = gltf.scene ?? new THREE.Group();
-  model.name = 'BuildingModel';
-
-  applyAlignment(model, alignment);
-
-  return model;
+  // 项目当前不使用外部 glb，直接返回程序化模型以避免多余的网络请求与控制台告警。
+  const canteen = new Canteen().getGroup();
+  canteen.name = 'CanteenModel';
+  const alignment = await loadAlignmentMeta();
+  applyAlignment(canteen, alignment);
+  return canteen;
 }
 
 async function loadAlignmentMeta(): Promise<AlignmentMeta | null> {

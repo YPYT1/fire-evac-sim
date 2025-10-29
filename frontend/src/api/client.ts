@@ -9,7 +9,7 @@ export interface FireSource {
 }
 
 export interface SimStartPayload {
-  mode: 'fixed' | 'random' | 'manual';
+  mode: 'floor1' | 'floor2' | 'floor3';
   fires?: FireSource[];
   agents?: {
     count: number;
@@ -69,6 +69,7 @@ export type WebSocketMessage =
       agents: unknown[];
       fires: unknown[];
       goals?: unknown[];
+      paths?: number[][][];
       stats?: SimStats;
     }
   | { type: 'end' | 'error'; reason?: string };

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from datetime import datetime
-from typing import Dict, List
+from typing import Dict, Iterable, List
 
 from ..core.schemas import AgentState, FireSource
 
@@ -24,6 +24,7 @@ class SimulationState:
     fire_decay: float = 0.95
     speed_mean: float = 1.3
     speed_std: float = 0.2
+    paths: List[List[tuple[float, float, float]]] = field(default_factory=list)
 
     def update_agent(self, state: AgentState) -> None:
         """更新/新增代理状态。"""
@@ -32,6 +33,10 @@ class SimulationState:
     def remove_agent(self, agent_id: int) -> None:
         """删除代理，示例实现用于占位。"""
         self.agents.pop(agent_id, None)
+
+    def set_agents(self, agent_list: Iterable[AgentState]) -> None:
+        """用一组新状态替换当前代理。"""
+        self.agents = {agent.id: agent for agent in agent_list}
 
     def advance(self, dt: float) -> None:
         """推进一次仿真，当前逻辑仅做匀速位移占位。"""
@@ -50,6 +55,7 @@ class SimulationState:
     def stats(self) -> dict:
         """计算快照统计数据，供状态面板使用。"""
         active_agents = len(self.agents)
+        total_agents = self.total_agents
         if active_agents:
             average_speed = sum(
                 (vx ** 2 + vy ** 2 + vz ** 2) ** 0.5
@@ -57,12 +63,12 @@ class SimulationState:
             ) / active_agents
         else:
             average_speed = 0.0
-        if self.total_agents > 0:
-            congestion_ratio = min(1.0, active_agents / self.total_agents)
+        if total_agents > 0:
+            congestion_ratio = min(1.0, active_agents / total_agents)
         else:
             congestion_ratio = 0.0
         return {
-            "agent_count": active_agents,
+            "agent_count": total_agents,
             "active_agents": active_agents,
             "average_speed": average_speed,
             "congestion_ratio": congestion_ratio,
@@ -80,6 +86,7 @@ class SimulationState:
             "agents": [agent.dict() for agent in self.agents.values()],
             "fires": [fire.dict() for fire in self.fires],
             "goals": self.goals,
+            "paths": self.paths,
             "stats": self.stats(),
             "updated_at": self.last_updated.isoformat(),
         }

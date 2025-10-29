@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import heapq
-from typing import Dict, List, Tuple
+from typing import Dict, Iterable, List, Optional, Tuple
 
 from .grid import Grid
 
@@ -25,14 +25,22 @@ def reconstruct_path(came_from: Dict[Coordinate, Coordinate], current: Coordinat
     return path
 
 
-def astar(grid: Grid, start: Coordinate, goal: Coordinate) -> List[Coordinate]:
-    """简易 A* 实现。后续可替换为多目标/多出口策略。"""
+def astar(
+    grid: Grid,
+    start: Coordinate,
+    goal: Coordinate,
+    *,
+    blocked: Optional[Iterable[Coordinate]] = None,
+    cost_field: Optional[Dict[Coordinate, float]] = None,
+) -> List[Coordinate]:
+    """简易 A* 实现，支持动态禁行与代价场。"""
 
     open_set: list[tuple[float, Coordinate]] = []
     heapq.heappush(open_set, (0.0, start))
 
     came_from: Dict[Coordinate, Coordinate] = {}
     g_score: Dict[Coordinate, float] = {start: 0.0}
+    blocked_set = set(blocked or [])
 
     while open_set:
         _, current = heapq.heappop(open_set)
@@ -40,7 +48,11 @@ def astar(grid: Grid, start: Coordinate, goal: Coordinate) -> List[Coordinate]:
             return reconstruct_path(came_from, current)
 
         for neighbor in grid.neighbors(*current):
+            if neighbor in blocked_set:
+                continue
             tentative_g = g_score[current] + 1.0
+            if cost_field:
+                tentative_g += float(cost_field.get(neighbor, 0.0))
             if tentative_g < g_score.get(neighbor, float("inf")):
                 came_from[neighbor] = current
                 g_score[neighbor] = tentative_g

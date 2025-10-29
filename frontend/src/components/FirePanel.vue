@@ -2,7 +2,7 @@
   <section class="panel">
     <h2>火点管理</h2>
     <p class="hint">
-      当前火点列表来自后端状态，手动模式下可点击场景放置新火点并触发 /sim/replan。
+      火点根据所选楼层自动预设，可在后端动态调整或通过 API 触发重规划。
     </p>
     <h3>实时火点</h3>
     <ul class="fire-list">
@@ -11,15 +11,6 @@
       </li>
       <li v-if="fires.length === 0" class="placeholder">暂无火点</li>
     </ul>
-    <template v-if="manualFires.length">
-      <h3>手动火点 ({{ manualFires.length }})</h3>
-      <ul class="fire-list">
-        <li v-for="fire in manualFires" :key="`manual-${fire.position.join('-')}`">
-          📍 ({{ fire.position[0].toFixed(1) }}, {{ fire.position[2].toFixed(1) }})
-        </li>
-      </ul>
-      <button type="button" class="ghost" @click="clearManual">清空手动火点</button>
-    </template>
   </section>
 </template>
 
@@ -28,11 +19,6 @@ import { useSimStore } from '../store/simStore';
 
 const store = useSimStore();
 const fires = store.fires;
-const manualFires = store.manualFires;
-
-function clearManual() {
-  void store.clearManualFires();
-}
 </script>
 
 <style scoped>

@@ -5,13 +5,15 @@ from pathlib import Path
 from backend.app.sim.grid import Grid, GridCell, load_grid
 
 
-def test_load_grid_from_demo_map():
-    path = Path("backend/app/data/maps/demo_map.json")
+def test_load_grid_from_canteen_map():
+    path = Path("backend/app/data/maps/canteen_map.json")
     grid = load_grid(path)
-    assert grid.width == 10
-    assert grid.height == 10
+    assert grid.width == 60
+    assert grid.height == 60
     assert grid.cell_size == 1.0
-    assert all(cell.walkable for row in grid.cells for cell in row)
+    assert grid.origin == (-30.0, 0.0, -30.0)
+    assert "north_door" in grid.exits
+    assert any(cell.walkable for row in grid.cells for cell in row)
 
 
 def test_neighbors_returns_valid_indices():

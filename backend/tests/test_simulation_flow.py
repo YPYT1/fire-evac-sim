@@ -18,9 +18,9 @@ def test_simulation_lifecycle():
     client = TestClient(app)
 
     start_payload = {
-        "mode": "fixed",
+        "mode": "floor1",
         "agents": {"count": 10, "speed_mean": 1.2, "speed_std": 0.1},
-        "goals": ["exitA"],
+        "goals": ["north_door"],
     }
     start_response = client.post("/sim/start", json=start_payload)
     assert start_response.status_code == 200

@@ -14,37 +14,37 @@ from backend.app.sim.utils import grid_to_world
 
 BASE_URL = os.environ.get("SIM_BASE_URL", "http://127.0.0.1:8000")
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-MAP_PATH = PROJECT_ROOT / "backend" / "app" / "data" / "maps" / "demo_map.json"
+MAP_PATH = PROJECT_ROOT / "backend" / "app" / "data" / "maps" / "canteen_map.json"
 ALIGNMENT_PATH = PROJECT_ROOT / "frontend" / "public" / "models" / "building_alignment.json"
 
 SCENARIOS: list[dict[str, Any]] = [
     {
-        "name": "fixed-basic",
+        "name": "floor1-basic",
         "payload": {
-            "mode": "fixed",
-            "agents": {"count": 50, "speed_mean": 1.3, "speed_std": 0.15},
-            "goals": ["exitA", "exitB"],
+            "mode": "floor1",
+            "agents": {"count": 60, "speed_mean": 1.3, "speed_std": 0.15},
+            "goals": ["north_door", "south_door"],
         },
     },
     {
-        "name": "random-evac",
+        "name": "floor2-replan",
         "payload": {
-            "mode": "random",
+            "mode": "floor2",
             "agents": {"count": 120, "speed_mean": 1.2, "speed_std": 0.25},
-            "goals": ["exitA"],
+            "goals": ["east_door", "west_door"],
         },
         "replan_after": 2.0,
     },
     {
-        "name": "manual-test",
+        "name": "floor3-custom",
         "payload": {
-            "mode": "manual",
-            "agents": {"count": 80, "speed_mean": 1.4, "speed_std": 0.2},
-            "goals": ["exitB"],
+            "mode": "floor3",
+            "agents": {"count": 90, "speed_mean": 1.4, "speed_std": 0.2},
+            "goals": ["north_door"],
         },
         "manual_fires": [
-            {"position": [2.0, 0.0, 3.0], "intensity": 1.0},
-            {"position": [6.0, 0.0, 5.0], "intensity": 0.8},
+            {"position": [-5.0, 8.0, 4.0], "intensity": 1.0},
+            {"position": [12.0, 8.0, -6.0], "intensity": 0.9},
         ],
     },
 ]
@@ -68,6 +68,8 @@ def verify_coordinate_alignment() -> bool:
     anchors = alignment.get("anchors", [])
 
     cell_size = float(map_data["cellSize"])
+    origin_raw = map_data.get("origin", [0.0, 0.0, 0.0])
+    origin = (float(origin_raw[0]), float(origin_raw[1]), float(origin_raw[2]))
     width_cells = int(map_data["width"])
     height_cells = int(map_data["height"])
 
@@ -104,7 +106,7 @@ def verify_coordinate_alignment() -> bool:
             continue
 
         gx, gy = float(grid_pt[0]), float(grid_pt[1])
-        computed = grid_to_world(gx, gy, cell_size)
+        computed = grid_to_world(gx, gy, cell_size, origin)
         diff = max(abs(computed[0] - float(world_pt[0])), abs(computed[2] - float(world_pt[2])))
         if diff > 1e-3:
             issues.append(

@@ -1,7 +1,7 @@
 [project]
 name = "fire-evac-sim"
 version = "0.1.0"
-description = "Fire evacuation simulation backend"
+description = "火灾疏散模拟 backend"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
@@ -10,6 +10,7 @@ dependencies = [
     "pydantic>=2.12.3",
     "pyyaml>=6.0.3",
     "uvicorn>=0.38.0",
+    "websockets>=12.0",
 ]
 
 [dependency-groups]

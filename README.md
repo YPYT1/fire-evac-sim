@@ -2,7 +2,7 @@
 # README
 # README
 
-# 🔥 Fire Evacuation Simulation Platform
+# 🔥 火灾疏散模拟 Platform
 ### —— 基于 Python 3.11 + FastAPI + RVO2 + Vue 3 + Three.js + Bun 的建筑火灾疏散仿真系统
 
 # 🧭 一、项目简介（Project Overview）

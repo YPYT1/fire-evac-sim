@@ -4,7 +4,8 @@
 import { defineStore } from 'pinia';
 import { ref, shallowRef } from 'vue';
 import type { FireSource, WebSocketMessage, SimStats } from '../api/client';
-import { replanSimulation } from '../api/client';
+
+type SimMode = 'floor1' | 'floor2' | 'floor3';
 
 interface AgentState {
   id: number;
@@ -17,6 +18,7 @@ export const useSimStore = defineStore('sim', () => {
   const tickHz = ref<number>(20);
   const agents = shallowRef<AgentState[]>([]);
   const fires = shallowRef<FireSource[]>([]);
+  const paths = shallowRef<number[][][]>([]);
   const stats = ref<SimStats>({
     agent_count: 0,
     active_agents: 0,
@@ -26,9 +28,7 @@ export const useSimStore = defineStore('sim', () => {
     speed_std: 0,
     fire_decay: 0,
   });
-  const mode = ref<'fixed' | 'random' | 'manual'>('fixed');
-  const manualFires = shallowRef<FireSource[]>([]);
-  const manualFireLimit = 5;
+  const mode = ref<SimMode>('floor1');
   const lastTickProcessed = ref<number | null>(null);
 
   function applySocketMessage(msg: WebSocketMessage) {
@@ -53,6 +53,7 @@ export const useSimStore = defineStore('sim', () => {
 
       agents.value = msg.agents as AgentState[];
       fires.value = msg.fires as FireSource[];
+      paths.value = (msg.paths as number[][][]) ?? [];
       if (msg.stats) {
         stats.value = msg.stats;
         if (typeof msg.tick_hz === 'number') {
@@ -72,6 +73,7 @@ export const useSimStore = defineStore('sim', () => {
       sessionId.value = null;
       agents.value = [];
       fires.value = [];
+      paths.value = [];
       stats.value = {
         agent_count: 0,
         active_agents: 0,
@@ -84,35 +86,8 @@ export const useSimStore = defineStore('sim', () => {
     }
   }
 
-  function setMode(nextMode: 'fixed' | 'random' | 'manual') {
+  function setMode(nextMode: SimMode) {
     mode.value = nextMode;
-    if (nextMode !== 'manual') {
-      manualFires.value = [];
-    }
-  }
-
-  async function addManualFire(position: [number, number, number]) {
-    if (!sessionId.value) return;
-    if (mode.value !== 'manual') return;
-    const nextFire: FireSource = { position, intensity: 1.0 };
-    const nextList = [...manualFires.value, nextFire].slice(-manualFireLimit);
-    manualFires.value = nextList;
-    await replanSimulation({
-      session_id: sessionId.value,
-      fires: nextList,
-      reason: 'manual_selection',
-    });
-  }
-
-  async function clearManualFires() {
-    manualFires.value = [];
-    if (sessionId.value && mode.value === 'manual') {
-      await replanSimulation({
-        session_id: sessionId.value,
-        fires: [],
-        reason: 'manual_clear',
-      });
-    }
   }
 
   function reset() {
@@ -128,8 +103,8 @@ export const useSimStore = defineStore('sim', () => {
       speed_std: 0,
       fire_decay: 0,
     };
-    manualFires.value = [];
     lastTickProcessed.value = null;
+    paths.value = [];
   }
 
   return {
@@ -137,13 +112,11 @@ export const useSimStore = defineStore('sim', () => {
     tickHz,
     agents,
     fires,
+    paths,
     stats,
     mode,
-    manualFires,
     applySocketMessage,
     setMode,
-    addManualFire,
-    clearManualFires,
     reset,
   };
 });

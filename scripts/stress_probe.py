@@ -32,22 +32,22 @@ ScenarioType = Literal["crowd_peak", "exit_blocked"]
 SCENARIOS: dict[ScenarioType, dict[str, Any]] = {
     "crowd_peak": {
         "payload": {
-            "mode": "random",
+            "mode": "floor2",
             "agents": {"count": 600, "speed_mean": 1.2, "speed_std": 0.3},
-            "goals": ["exitA"],
+            "goals": ["east_door"],
         },
         "duration": 6.0,
         "interval": 0.5,
     },
     "exit_blocked": {
         "payload": {
-            "mode": "manual",
+            "mode": "floor1",
             "agents": {"count": 240, "speed_mean": 1.3, "speed_std": 0.2},
-            "goals": ["exitA"],
+            "goals": ["north_door"],
         },
         "manual_fires": [
-            {"position": [9.5, 0.0, 5.0], "intensity": 1.5},
-            {"position": [9.0, 0.0, 5.0], "intensity": 1.2},
+            {"position": [0.0, 0.0, 29.0], "intensity": 1.4},
+            {"position": [-2.0, 0.0, 28.0], "intensity": 1.1},
         ],
         "duration": 6.0,
         "interval": 0.5,

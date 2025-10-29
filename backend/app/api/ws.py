@@ -35,4 +35,4 @@ async def simulation_socket(
             await websocket.send_json({"type": "state", **snapshot})
             await asyncio.sleep(1 / state.tick_hz)
     except WebSocketDisconnect:
-        await websocket.close()
+        pass

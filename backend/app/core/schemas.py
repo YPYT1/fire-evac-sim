@@ -26,8 +26,8 @@ class AgentSpawnConfig(BaseModel):
 class SimStartRequest(BaseModel):
     """启动仿真请求体。"""
 
-    mode: Literal["fixed", "random", "manual"] = "fixed"
-    fires: list[FireSource] | None = Field(default=None, description="手动模式下需要提供火源列表")
+    mode: Literal["floor1", "floor2", "floor3"] = "floor1"
+    fires: list[FireSource] | None = Field(default=None, description="覆盖默认火点分布")
     agents: AgentSpawnConfig = Field(default_factory=AgentSpawnConfig)
     goals: list[str] = Field(default_factory=list, description="出口或目标点的标识符")
     avoidance_strategy: Literal["rvo2", "rvo2_py", "simple"] | None = Field(

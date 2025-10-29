@@ -15,12 +15,17 @@ from pydantic import BaseModel, Field, field_validator, ConfigDict
 class SimulationSettings(BaseModel):
     """仿真运行的静态配置。"""
 
-    mode: Literal["fixed", "random", "manual"] = "fixed"
+    mode: Literal["floor1", "floor2", "floor3"] = "floor1"
     tick_hz: int = Field(default=20, ge=1, description="仿真刷新频率（Hz）")
     agent_count: int = Field(default=200, ge=1)
     speed_mean: float = Field(default=1.3, gt=0)
     speed_std: float = Field(default=0.2, ge=0)
-    map_name: str = Field(default="demo_map.json")
+    map_name: str = Field(default="canteen_map.json")
+    map_cell_size: float = Field(default=1.0, gt=0)
+    map_origin: tuple[float, float, float] = Field(default=(0.0, 0.0, 0.0))
+    map_exits: list[dict] = Field(default_factory=list)
+    start_regions: list[dict] = Field(default_factory=list)
+    goals: list[str] = Field(default_factory=list)
     fire_decay: float = Field(default=0.95, ge=0.0, le=1.0, description="火源扩散衰减系数")
     avoidance_strategy: Literal["rvo2", "rvo2_py", "simple"] = Field(
         default="rvo2",
@@ -82,10 +87,15 @@ def load_simulation_config(path: Path) -> SimulationSettings:
         if isinstance(speed_cfg, dict):
             payload.setdefault("speed_mean", speed_cfg.get("mean"))
             payload.setdefault("speed_std", speed_cfg.get("std"))
+        if "start_region" in agents_section:
+            payload.setdefault("start_regions", agents_section.get("start_region"))
 
     map_section = raw.get("map")
     if isinstance(map_section, dict):
         payload.setdefault("map_name", map_section.get("file"))
+        payload.setdefault("map_cell_size", map_section.get("cell_size"))
+        payload.setdefault("map_origin", tuple(map_section.get("origin", (0.0, 0.0, 0.0))))
+        payload.setdefault("map_exits", map_section.get("exits", []))
 
     fire_section = raw.get("fire")
     if isinstance(fire_section, dict):
@@ -96,12 +106,17 @@ def load_simulation_config(path: Path) -> SimulationSettings:
 
     # Fallback：若部分关键参数仍为空，则使用默认值填充
     defaults = {
-        "mode": "fixed",
+        "mode": "floor1",
         "tick_hz": 20,
         "agent_count": 200,
         "speed_mean": 1.3,
         "speed_std": 0.2,
-        "map_name": "demo_map.json",
+        "map_name": "canteen_map.json",
+        "map_cell_size": 1.0,
+        "map_origin": (-30.0, 0.0, -30.0),
+        "map_exits": [],
+        "start_regions": [],
+        "goals": [],
         "avoidance_strategy": "rvo2",
         "fire_decay": 0.95,
     }

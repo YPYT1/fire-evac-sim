@@ -1,8 +1,8 @@
 <template>
   <div class="shell">
     <header class="shell__header">
-      <h1>Fire Evacuation Simulation</h1>
-      <p>火灾疏散仿真平台 · Vue3 + Three.js</p>
+      <h1>火灾疏散模拟</h1>
+      <p>火灾疏散仿真平台</p>
     </header>
     <section class="shell__body">
       <RouterView />

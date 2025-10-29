@@ -5,9 +5,9 @@
       <label class="form__field">
         模式
         <select v-model="mode">
-          <option value="fixed">固定火点</option>
-          <option value="random">随机火点</option>
-          <option value="manual">手动指定</option>
+          <option value="floor1">一楼着火点</option>
+          <option value="floor2">二楼着火点</option>
+          <option value="floor3">三楼着火点</option>
         </select>
       </label>
       <label class="form__field">
@@ -18,11 +18,9 @@
         Tick Hz
         <input type="number" min="1" v-model.number="tickHz" />
       </label>
-      <button type="submit" :disabled="isRunning">启动仿真</button>
-    </form>
-    <p v-if="mode === 'manual'" class="hint">
-      手动模式：启动会话后，点击 3D 场景即可放置火点（最多 5 个）。
-    </p>
+      <button type="submit" :disabled="isRunning || starting">启动仿真</button>
+  </form>
+    <p class="hint">选择不同楼层可预览对应高度的疏散路径与火点分布。</p>
     <button type="button" class="stop" @click="onStop" :disabled="!isRunning">停止仿真</button>
     <p class="status">当前会话：{{ sessionLabel }}</p>
   </section>
@@ -36,27 +34,37 @@ import { openSimulationSocket, startSimulation, stopSimulation } from '../api/cl
 const store = useSimStore();
 const mode = computed({
   get: () => store.mode,
-  set: (value: 'fixed' | 'random' | 'manual') => store.setMode(value),
+  set: (value: 'floor1' | 'floor2' | 'floor3') => store.setMode(value),
 });
 const agents = ref(200);
 const tickHz = ref(20);
+const starting = ref(false);
 let socket: WebSocket | null = null;
 
 const isRunning = computed(() => !!store.sessionId);
 const sessionLabel = computed(() => store.sessionId ?? '尚未启动');
 
 async function onStart() {
-  const response = await startSimulation({
-    mode: mode.value,
-    agents: {
-      count: agents.value,
-      speed_mean: 1.3,
-      speed_std: 0.2,
-    },
-  });
-  store.tickHz = response.tick_hz;
-  store.setMode(mode.value);
-  connectSocket(response.session_id);
+  if (starting.value) return;
+  starting.value = true;
+  try {
+    if (store.sessionId) {
+      await onStop();
+    }
+    const response = await startSimulation({
+      mode: mode.value,
+      agents: {
+        count: agents.value,
+        speed_mean: 1.3,
+        speed_std: 0.2,
+      },
+    });
+    store.tickHz = response.tick_hz;
+    store.setMode(mode.value);
+    connectSocket(response.session_id);
+  } finally {
+    starting.value = false;
+  }
 }
 
 async function onStop() {
@@ -65,6 +73,7 @@ async function onStop() {
   socket?.close();
   socket = null;
   store.reset();
+  starting.value = false;
 }
 
 function connectSocket(sessionId: string) {

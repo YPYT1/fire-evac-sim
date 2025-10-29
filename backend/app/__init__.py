@@ -1,4 +1,4 @@
-"""Fire evacuation simulation backend package."""
+"""火灾疏散模拟 backend package."""
 
 __all__ = ["create_app"]
 

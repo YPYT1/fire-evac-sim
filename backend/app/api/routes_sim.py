@@ -40,12 +40,7 @@ async def start_simulation(
             update={"agents": payload.agents.model_copy(update=agent_updates)}
         )
 
-    response = manager.start(
-        payload,
-        sim_settings.tick_hz,
-        sim_settings.avoidance_strategy,
-        sim_settings.fire_decay,
-    )
+    response = manager.start(payload, sim_settings)
     return response
 
 
