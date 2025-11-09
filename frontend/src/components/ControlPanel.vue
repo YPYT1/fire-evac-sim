@@ -4,11 +4,14 @@
     <form class="form" @submit.prevent="onStart">
       <label class="form__field">
         模式
-        <select v-model="mode">
-          <option value="floor1">一楼着火点</option>
-          <option value="floor2">二楼着火点</option>
-          <option value="floor3">三楼着火点</option>
-        </select>
+        <div class="mode-picker">
+          <span class="mode-dot" :style="modeSwatchStyle" />
+          <select v-model="mode">
+            <option value="floor1">一楼着火点</option>
+            <option value="floor2">二楼着火点</option>
+            <option value="floor3">三楼着火点</option>
+          </select>
+        </div>
       </label>
       <label class="form__field">
         人数
@@ -26,8 +29,26 @@
           </option>
         </select>
       </label>
+      <div class="form__field crowd-field">
+        <div class="crowd-header">
+          <span>人群分流参数</span>
+          <small>实时发送到 crowd 模块</small>
+        </div>
+        <div class="crowd-control">
+          <label>影响半径 <span>{{ crowdRadius.toFixed(2) }} m</span></label>
+          <input type="range" min="0.8" max="2.2" step="0.05" v-model.number="crowdRadius" />
+        </div>
+        <div class="crowd-control">
+          <label>斥力增益 <span>{{ crowdGain.toFixed(2) }}</span></label>
+          <input type="range" min="0" max="2.5" step="0.05" v-model.number="crowdGain" />
+        </div>
+        <div class="crowd-control">
+          <label>推力系数 <span>{{ crowdPush.toFixed(2) }}</span></label>
+          <input type="range" min="0" max="1.2" step="0.05" v-model.number="crowdPush" />
+        </div>
+      </div>
       <button type="submit" :disabled="isRunning || starting">启动仿真</button>
-  </form>
+    </form>
     <p class="hint">选择不同楼层可预览对应高度的疏散路径与火点分布。</p>
     <button type="button" class="stop" @click="onStop" :disabled="!isRunning">停止仿真</button>
     <p class="status">当前会话：{{ sessionLabel }}</p>
@@ -38,12 +59,17 @@
 import { ref, computed } from 'vue';
 import { useSimStore } from '../store/simStore';
 import { openSimulationSocket, startSimulation, stopSimulation } from '../api/client';
+import { floorColorHex } from '../constants/pathPalette';
 
 const store = useSimStore();
 const mode = computed({
   get: () => store.mode,
   set: (value: 'floor1' | 'floor2' | 'floor3') => store.setMode(value),
 });
+const modeSwatchStyle = computed(() => ({
+  background: floorColorHex(mode.value),
+  boxShadow: `0 0 12px ${floorColorHex(mode.value)}33`,
+}));
 const agents = ref(200);
 const tickHz = ref(20);
 const speedOptions = [
@@ -52,6 +78,9 @@ const speedOptions = [
   { label: '2x', value: 2 },
 ];
 const speedMultiplier = ref(1);
+const crowdRadius = ref(1.45);
+const crowdGain = ref(1.25);
+const crowdPush = ref(0.6);
 const starting = ref(false);
 let socket: WebSocket | null = null;
 
@@ -73,6 +102,11 @@ async function onStart() {
         speed_std: 0.2,
       },
       time_scale: speedMultiplier.value,
+      crowd: {
+        repulsion_radius: crowdRadius.value,
+        repulsion_gain: crowdGain.value,
+        repulsion_push_strength: crowdPush.value,
+      },
     });
     store.tickHz = response.tick_hz;
     store.setMode(mode.value);
@@ -120,6 +154,51 @@ function connectSocket(sessionId: string) {
   flex-direction: column;
   gap: 0.25rem;
   font-size: 0.9rem;
+}
+
+.mode-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mode-dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  flex-shrink: 0;
+}
+
+.crowd-field {
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 0.6rem;
+  padding: 0.75rem;
+  gap: 0.65rem;
+}
+
+.crowd-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: rgba(15, 23, 42, 0.75);
+}
+
+.crowd-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.crowd-control label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: rgba(15, 23, 42, 0.8);
+}
+
+.crowd-control input[type='range'] {
+  width: 100%;
 }
 
 input,

@@ -6,6 +6,7 @@
     <aside class="layout__sidebar">
       <ControlPanel />
       <StatusPanel />
+      <PathLegend />
       <FirePanel />
     </aside>
   </div>
@@ -16,6 +17,7 @@ import SceneCanvas from '../components/SceneCanvas.vue';
 import ControlPanel from '../components/ControlPanel.vue';
 import FirePanel from '../components/FirePanel.vue';
 import StatusPanel from '../components/StatusPanel.vue';
+import PathLegend from '../components/PathLegend.vue';
 </script>
 
 <style scoped>

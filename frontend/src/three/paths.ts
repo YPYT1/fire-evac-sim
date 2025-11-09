@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { LineGeometry } from 'three/examples/jsm/lines/LineGeometry.js';
 import { LineMaterial } from 'three/examples/jsm/lines/LineMaterial.js';
 import { Line2 } from 'three/examples/jsm/lines/Line2.js';
+import { classifyFloorByHeight, getFloorColor, type FloorBand } from '../constants/pathPalette';
 
 const pathResolution = new THREE.Vector2(1, 1);
 let resolutionWatcherBound = false;
@@ -28,46 +29,65 @@ export function updatePaths(group: THREE.Group, paths: number[][][]): void {
   disposeChildren(group);
   ensureResolutionWatcher();
 
-  const palette = [
-    0xff3b30, // vivid red
-    0xffb800, // amber
-    0x32d74b, // green
-    0x0a84ff, // blue
-    0xbf5af2, // purple
-    0xff9f0a, // orange
-  ];
-
   paths.forEach((path, index) => {
     if (!Array.isArray(path) || path.length < 2) {
       return;
     }
-    const positions: number[] = [];
-    path.forEach(([x, y, z]) => {
-      positions.push(x, y + 0.05, z);
+    const segments = splitByFloor(path);
+    segments.forEach((segment) => {
+      const positions: number[] = [];
+      segment.points.forEach(([x, y, z]) => {
+        positions.push(x, y + 0.05, z);
+      });
+      if (positions.length < 6) {
+        return;
+      }
+
+      const palette = getFloorColor(segment.floor);
+      const haloGeometry = new LineGeometry();
+      haloGeometry.setPositions(positions);
+      const haloMaterial = new LineMaterial({
+        color: new THREE.Color(palette.halo),
+        linewidth: 0.32,
+        opacity: 0.4,
+        transparent: true,
+        dashed: false,
+        depthTest: false,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
+        worldUnits: true,
+      });
+      haloMaterial.resolution.copy(pathResolution);
+      const halo = new Line2(haloGeometry, haloMaterial);
+      halo.computeLineDistances();
+      halo.userData = { type: 'path-line', layer: 'halo', floor: segment.floor };
+      group.add(halo);
+
+      const coreGeometry = new LineGeometry();
+      coreGeometry.setPositions(positions);
+      const coreMaterial = new LineMaterial({
+        color: new THREE.Color(palette.core),
+        linewidth: 0.14,
+        opacity: 1,
+        transparent: true,
+        dashed: true,
+        dashSize: 0.22,
+        gapSize: 0.1,
+        worldUnits: true,
+        depthTest: true,
+        depthWrite: false,
+      });
+      coreMaterial.resolution.copy(pathResolution);
+      const coreLine = new Line2(coreGeometry, coreMaterial);
+      coreLine.computeLineDistances();
+      coreLine.userData = { type: 'path-line', layer: 'core', floor: segment.floor };
+      group.add(coreLine);
     });
 
-    const geometry = new LineGeometry();
-    geometry.setPositions(positions);
-
-    const color = new THREE.Color(palette[index % palette.length]);
-    const material = new LineMaterial({
-      color,
-      linewidth: 0.08,
-      opacity: 0.95,
-      transparent: true,
-      dashed: true,
-      dashSize: 0.3,
-      gapSize: 0.15,
-      worldUnits: true,
-    });
-    material.resolution.copy(pathResolution);
-
-    const line = new Line2(geometry, material);
-    line.computeLineDistances();
-    line.userData = { type: 'path-line', hue: (index * 0.618) % 1 };
-    group.add(line);
-
-    const arrow = createArrow(color, path[path.length - 2], path[path.length - 1]);
+    const lastSegment = segments[segments.length - 1];
+    const arrowPalette = lastSegment ? getFloorColor(lastSegment.floor) : getFloorColor('floor1');
+    const arrowColor = new THREE.Color(arrowPalette.core);
+    const arrow = createArrow(arrowColor, path[path.length - 2], path[path.length - 1]);
     group.add(arrow);
   });
 }
@@ -104,10 +124,11 @@ function disposeChildren(group: THREE.Group): void {
 function createArrow(color: THREE.Color, from: number[], to: number[]): THREE.Group {
   const group = new THREE.Group();
   const length = Math.max(0.8, new THREE.Vector3(to[0] - from[0], to[1] - from[1], to[2] - from[2]).length());
-  const shaftGeometry = new THREE.CylinderGeometry(0.05, 0.05, Math.min(length, 1.5), 8, 1);
+  const shaftGeometry = new THREE.CylinderGeometry(0.07, 0.07, Math.min(length, 1.5), 8, 1);
   const shaftMaterial = new THREE.MeshStandardMaterial({
     color,
     emissive: color.clone().multiplyScalar(0.8),
+    emissiveIntensity: 1.1,
     metalness: 0.2,
     roughness: 0.4,
   });
@@ -115,10 +136,11 @@ function createArrow(color: THREE.Color, from: number[], to: number[]): THREE.Gr
   shaft.position.y = length / 2;
   group.add(shaft);
 
-  const headGeometry = new THREE.ConeGeometry(0.16, 0.35, 12);
+  const headGeometry = new THREE.ConeGeometry(0.2, 0.4, 14);
   const headMaterial = new THREE.MeshStandardMaterial({
     color,
     emissive: color.clone().multiplyScalar(1.0),
+    emissiveIntensity: 1.2,
     metalness: 0.3,
     roughness: 0.2,
   });
@@ -132,4 +154,36 @@ function createArrow(color: THREE.Color, from: number[], to: number[]): THREE.Gr
   group.rotateX(Math.PI / 2);
   group.userData = { type: 'path-arrow' };
   return group;
+}
+
+interface ColoredSegment {
+  floor: FloorBand;
+  points: number[][];
+}
+
+function splitByFloor(path: number[][]): ColoredSegment[] {
+  const segments: ColoredSegment[] = [];
+  if (path.length < 2) {
+    return segments;
+  }
+  let currentFloor: FloorBand = classifyFloorByHeight(path[0][1]);
+  let currentPoints: number[][] = [path[0]];
+  for (let i = 1; i < path.length; i += 1) {
+    const point = path[i];
+    const floor = classifyFloorByHeight(point[1]);
+    if (floor !== currentFloor) {
+      currentPoints.push(point);
+      if (currentPoints.length >= 2) {
+        segments.push({ floor: currentFloor, points: [...currentPoints] });
+      }
+      currentFloor = floor;
+      currentPoints = [point];
+    } else {
+      currentPoints.push(point);
+    }
+  }
+  if (currentPoints.length >= 2) {
+    segments.push({ floor: currentFloor, points: currentPoints });
+  }
+  return segments;
 }

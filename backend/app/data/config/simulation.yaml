@@ -4,6 +4,11 @@ sim:
   avoidance_strategy: rvo2
   seed: 20251024
 
+crowd:
+  repulsion_radius: 1.45
+  repulsion_gain: 1.25
+  repulsion_push_strength: 0.6
+
 # 多楼层配置
 floors:
   floor1:

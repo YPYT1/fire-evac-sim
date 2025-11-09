@@ -18,6 +18,12 @@ export interface SimStartPayload {
   };
   goals?: string[];
   time_scale?: number;
+  avoidance_strategy?: 'rvo2' | 'rvo2_py' | 'simple';
+  crowd?: {
+    repulsion_radius?: number;
+    repulsion_gain?: number;
+    repulsion_push_strength?: number;
+  };
 }
 
 export interface SimStartResponse {

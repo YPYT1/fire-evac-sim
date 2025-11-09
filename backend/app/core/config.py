@@ -42,6 +42,14 @@ class FloorConfig(BaseModel):
     fire_count_range: List[int] = Field(default=[1, 3])
 
 
+class CrowdBehaviorConfig(BaseModel):
+    """人群动力学可调参数。"""
+
+    repulsion_radius: float = Field(default=1.3, ge=0.1)
+    repulsion_gain: float = Field(default=1.2, ge=0.0)
+    repulsion_push_strength: float = Field(default=0.5, ge=0.0)
+
+
 class SimulationSettings(BaseModel):
     """仿真运行的静态配置。"""
 
@@ -65,6 +73,7 @@ class SimulationSettings(BaseModel):
     # 新增多楼层配置
     floors: Optional[Dict[str, FloorConfig]] = Field(default=None)
     stairs: Optional[Dict[str, StairConfig]] = Field(default=None)
+    crowd: Optional[CrowdBehaviorConfig] = Field(default=None)
 
     @field_validator("map_name")
     def _validate_map(cls, value: str) -> str:
@@ -173,6 +182,10 @@ def load_simulation_config(path: Path) -> SimulationSettings:
                 stair_data_copy["connections"] = connections
                 stairs_config[stair_id] = StairConfig(**stair_data_copy)
         payload["stairs"] = stairs_config
+
+    crowd_section = raw.get("crowd")
+    if isinstance(crowd_section, dict):
+        payload["crowd"] = CrowdBehaviorConfig(**crowd_section)
 
     # Fallback：若部分关键参数仍为空，则使用默认值填充
     defaults = {

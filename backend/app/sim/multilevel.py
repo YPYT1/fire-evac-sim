@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import math
+import random
 from dataclasses import dataclass
 from typing import Dict, List, Optional, Set, Tuple
 
@@ -42,6 +43,7 @@ class MultiLevelPathPlanner:
         self.floors: Dict[str, FloorNode] = {}
         self.stair_connections: Dict[str, List[Tuple[str, str, List[GridCoord], List[GridCoord]]]] = {}
         # stair_id -> [(from_floor, to_floor, entry_cells, exit_cells), ...]
+        self._rng = random.Random()
         
     def add_floor(
         self,
@@ -231,13 +233,18 @@ class MultiLevelPathPlanner:
     ) -> List[GridCoord]:
         """在单层内计算到目标单元格集合的最短路径"""
         best_path: List[GridCoord] = []
-        best_length = math.inf
+        best_score = math.inf
         
         for target in targets:
             path = astar(floor_node.grid, start, target, blocked=blocked, cost_field=cost_field)
-            if path and len(path) < best_length:
+            if not path:
+                continue
+            score = len(path)
+            # 给长度相近的候选加入轻微噪声，避免所有代理走完全相同的格线
+            score += self._rng.uniform(0.0, 0.05)
+            if score < best_score:
+                best_score = score
                 best_path = path
-                best_length = len(path)
         
         return best_path
     
@@ -280,7 +287,9 @@ class MultiLevelPathPlanner:
     ) -> GridCoord:
         """楼梯出口（使用第一个，可扩展为随机）"""
         if exit_cells:
-            return exit_cells[0]
+            if len(exit_cells) == 1:
+                return exit_cells[0]
+            return self._rng.choice(exit_cells)
         return (0, 0)
     
     def _create_path_segment(

@@ -23,6 +23,12 @@ class AgentSpawnConfig(BaseModel):
     speed_std: float = Field(default=0.2, ge=0)
 
 
+class CrowdOverride(BaseModel):
+    repulsion_radius: float | None = Field(default=None, ge=0.0)
+    repulsion_gain: float | None = Field(default=None, ge=0.0)
+    repulsion_push_strength: float | None = Field(default=None, ge=0.0)
+
+
 class SimStartRequest(BaseModel):
     """启动仿真请求体。"""
 
@@ -39,6 +45,10 @@ class SimStartRequest(BaseModel):
         ge=0.25,
         le=4.0,
         description="仿真时间倍率，>1 即快进。",
+    )
+    crowd: CrowdOverride | None = Field(
+        default=None,
+        description="临时覆盖 crowd 分流参数，用于实验不同的 repulsion 设置。",
     )
 
 

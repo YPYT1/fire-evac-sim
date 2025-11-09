@@ -329,6 +329,22 @@ ensure_rvo2() {
   warn "rvo2-py 安装也失败，将继续使用 simple 避障策略。"
 }
 
+ensure_python_packages() {
+  local packages=(pyyaml fastapi uvicorn)
+  info "检查关键 Python 运行依赖：${packages[*]}"
+  for pkg in "${packages[@]}"; do
+    if uv pip show "${pkg}" >/dev/null 2>&1; then
+      info "${pkg} 已安装"
+    else
+      info "安装 ${pkg} ..."
+      if ! uv pip install "${pkg}" >/dev/null; then
+        warn "安装 ${pkg} 失败，请检查网络或证书配置。"
+        return 1
+      fi
+    fi
+  done
+}
+
 start_services() {
   mkdir -p "${LOG_DIR}"
   : >"${BACKEND_LOG}"
@@ -380,4 +396,5 @@ start_services() {
 ensure_env
 verify_env
 ensure_rvo2
+ensure_python_packages
 start_services

@@ -8,8 +8,8 @@ import random
 from pathlib import Path
 from typing import Dict, List, Literal, Optional, Set, Tuple
 
-from ..core.config import FloorConfig, SimulationSettings
-from ..core.schemas import FireSource, SimReplanRequest, SimStartRequest, SimStartResponse, SimStatusResponse
+from ..core.config import CrowdBehaviorConfig, FloorConfig, SimulationSettings
+from ..core.schemas import CrowdOverride, FireSource, SimReplanRequest, SimStartRequest, SimStartResponse, SimStatusResponse
 from ..sim.fire import build_cost_field, sample_random_fire_positions
 from ..sim.multilevel_evacuation import MultiLevelEvacuationSimulator
 from ..sim.state import SimulationState
@@ -81,11 +81,20 @@ def _random_floor_fires(
     return fires
 
 
-def _blocked_cells_for_fires(grid, fires: list[FireSource], radius: int = 3) -> set[tuple[int, int]]:
+def _blocked_cells_for_fires(
+    grid,
+    fires: list[FireSource],
+    *,
+    base_radius: int = 4,
+    intensity_scale: float = 1.5,
+) -> set[tuple[int, int]]:
+    """根据火源生成禁行区域，半径会随火势强弱放大。"""
+
     blocked: set[tuple[int, int]] = set()
     for fire in fires:
         fx, _, fz = fire.position
         gx, gy = world_to_grid(fx, fz, grid.cell_size, grid.origin)
+        radius = base_radius + int(max(0.0, fire.intensity - 1.0) * intensity_scale)
         for dy in range(-radius, radius + 1):
             for dx in range(-radius, radius + 1):
                 nx, ny = gx + dx, gy + dy
@@ -105,6 +114,21 @@ def _cost_lookup(grid, fires: list[FireSource], decay: float) -> Dict[tuple[int,
     return lookup
 
 
+def _apply_crowd_override(
+    sim_settings: SimulationSettings,
+    override: CrowdOverride | None,
+) -> SimulationSettings:
+    if not override:
+        return sim_settings
+    base = sim_settings.crowd or CrowdBehaviorConfig()
+    payload = base.model_dump()
+    for key, value in override.model_dump(exclude_unset=True).items():
+        if value is not None:
+            payload[key] = value
+    updated = CrowdBehaviorConfig(**payload)
+    return sim_settings.model_copy(update={"crowd": updated})
+
+
 class SessionManager:
     """管理仿真会话、后台循环与火点更新。"""
 
@@ -121,6 +145,7 @@ class SessionManager:
         """创建仿真会话并启动后台循环（真正的多楼层支持）。"""
         self._counter += 1
         session_id = f"demo-{self._counter}"
+        sim_settings = _apply_crowd_override(sim_settings, payload.crowd)
         tick_hz = sim_settings.tick_hz
         default_strategy = sim_settings.avoidance_strategy
         fire_decay = sim_settings.fire_decay
@@ -156,6 +181,7 @@ class SessionManager:
         
         # 在所需楼层生成火源
         all_fires: List[FireSource] = []
+        floor_fire_map: Dict[str, List[FireSource]] = {}
         blocked_by_floor: Dict[str, Set[Tuple[int, int]]] = {}
         cost_fields: Dict[str, Dict[Tuple[int, int], float]] = {}
         fire_levels: Set[str] = set(active_spawn_floors) if active_spawn_floors else set()
@@ -172,19 +198,23 @@ class SessionManager:
                 if floor_id in fire_levels:
                     floor_fires = _random_floor_fires(grid, floor_config, rng)
                     all_fires.extend(floor_fires)
+                floor_fire_map[floor_id] = floor_fires
                 blocked_by_floor[floor_id] = _blocked_cells_for_fires(grid, floor_fires)
                 cost_fields[floor_id] = _cost_lookup(grid, floor_fires, fire_decay)
 
         state.fires = all_fires
         state.speed_mean = payload.agents.speed_mean
         state.speed_std = payload.agents.speed_std
-        
+
+        multilevel_engine.set_floor_fires(floor_fire_map)
+
         # 初始化多楼层人员（按比例分配）
         spawned = multilevel_engine.initialize_agents_multilevel(
             total_count=payload.agents.count,
             agent_config=payload.agents,
             blocked_by_floor=blocked_by_floor,
             cost_fields=cost_fields,
+            floor_fires=floor_fire_map,
         )
         
         state.total_agents = spawned
@@ -269,6 +299,7 @@ class SessionManager:
                 prev_blocked: Dict[str, Set[Tuple[int, int]]] = session.get("blocked_by_floor", {})
                 blocked_by_floor: Dict[str, Set[Tuple[int, int]]] = {}
                 cost_fields: Dict[str, Dict[Tuple[int, int], float]] = {}
+                floor_fire_map: Dict[str, List[FireSource]] = {}
                 changed_floors: Set[str] = set()
                 
                 for floor_id, floor_config in sim_settings.floors.items():
@@ -280,6 +311,7 @@ class SessionManager:
                         costs = _cost_lookup(grid, floor_fires, state.fire_decay)
                         blocked_by_floor[floor_id] = blocked
                         cost_fields[floor_id] = costs
+                        floor_fire_map[floor_id] = floor_fires
                         if blocked != prev_blocked.get(floor_id):
                             changed_floors.add(floor_id)
                 
@@ -288,6 +320,7 @@ class SessionManager:
                 engine.update_navigation_fields(
                     blocked_by_floor,
                     cost_fields,
+                    floor_fires=floor_fire_map or None,
                     affected_floors=changed_floors or None,
                 )
                 state.set_agents(engine.agent_states())

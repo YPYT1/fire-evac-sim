@@ -30,14 +30,34 @@
         <span>火焰扩散衰减</span>
         <strong>{{ ((store.stats.fire_decay ?? 0) * 100).toFixed(1) }}%</strong>
       </li>
+      <li class="legend-row">
+        <span>当前楼层颜色</span>
+        <span class="legend-badge" :style="floorBadgeStyle">{{ modeLabel }}</span>
+      </li>
     </ul>
   </section>
 </template>
 
 <script setup lang="ts">
 import { useSimStore } from '../store/simStore';
+import { computed } from 'vue';
+import { floorColorHex } from '../constants/pathPalette';
 
 const store = useSimStore();
+const modeLabel = computed(() => {
+  switch (store.mode) {
+    case 'floor2':
+      return '二层';
+    case 'floor3':
+      return '三层';
+    default:
+      return '一层';
+  }
+});
+const floorBadgeStyle = computed(() => ({
+  background: floorColorHex(store.mode),
+  boxShadow: `0 0 10px ${floorColorHex(store.mode)}55`,
+}));
 </script>
 
 <style scoped>
@@ -70,5 +90,19 @@ const store = useSimStore();
 .stats strong {
   font-size: 1rem;
   color: #1d4ed8;
+}
+
+.legend-row {
+  align-items: center;
+}
+
+.legend-badge {
+  min-width: 3rem;
+  text-align: center;
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.8rem;
+  color: #0f172a;
+  border: 1px solid rgba(15, 23, 42, 0.15);
 }
 </style>
