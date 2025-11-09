@@ -76,9 +76,9 @@ class MultiLevelPathPlanner:
             
             # 更新楼层的楼梯信息
             if from_floor in self.floors:
-                self.floors[from_floor].stairs_down[stair_id] = entry_cells
+                self.floors[from_floor].stairs_down.setdefault(stair_id, entry_cells)
             if to_floor in self.floors:
-                self.floors[to_floor].stairs_up[stair_id] = exit_cells
+                self.floors[to_floor].stairs_up.setdefault(stair_id, exit_cells)
         
         self.stair_connections[stair_id] = connections
     
@@ -89,8 +89,8 @@ class MultiLevelPathPlanner:
         target_floor: str,
         target_cells: List[GridCoord],
         *,
-        blocked: Optional[Set[GridCoord]] = None,
-        cost_field: Optional[Dict[GridCoord, float]] = None,
+        blocked_map: Optional[Dict[str, Set[GridCoord]]] = None,
+        cost_fields: Optional[Dict[str, Dict[GridCoord, float]]] = None,
     ) -> List[PathSegment]:
         """
         查找从起点楼层到目标楼层的完整路径。
@@ -98,14 +98,17 @@ class MultiLevelPathPlanner:
         如果起点和目标在同一楼层，直接计算单层路径。
         如果需要跨楼层，计算多段路径：当前层 -> 楼梯 -> 下层 -> ... -> 目标层
         """
+        blocked_map = blocked_map or {}
+        cost_fields = cost_fields or {}
+
         if start_floor == target_floor:
             # 同楼层路径
             return self._compute_single_floor_path(
                 start_floor,
                 start_cell,
                 target_cells,
-                blocked=blocked,
-                cost_field=cost_field,
+                blocked=blocked_map.get(start_floor),
+                cost_field=cost_fields.get(start_floor),
             )
         
         # 跨楼层路径：需要找到楼梯序列
@@ -120,25 +123,35 @@ class MultiLevelPathPlanner:
             current_floor_id = floor_sequence[i]
             next_floor_id = floor_sequence[i + 1]
             
-            # 找到连接当前楼层和下一楼层的楼梯
-            stair_cells = self._find_stair_between_floors(current_floor_id, next_floor_id)
-            if not stair_cells:
+            candidates = self._stairs_between_floors(current_floor_id, next_floor_id)
+            if not candidates:
                 return []
             
-            # 当前层到楼梯的路径
+            best_option = None
+            best_length = math.inf
             floor_node = self.floors[current_floor_id]
-            path_to_stair = self._compute_path_to_cells(
-                floor_node,
-                current_cell,
-                stair_cells,
-                blocked=blocked,
-                cost_field=cost_field,
-            )
+            blocked = blocked_map.get(current_floor_id)
+            cost_field = cost_fields.get(current_floor_id)
             
-            if not path_to_stair:
+            for entry_cells, exit_cells in candidates:
+                path_to_stair = self._compute_path_to_cells(
+                    floor_node,
+                    current_cell,
+                    entry_cells,
+                    blocked=blocked,
+                    cost_field=cost_field,
+                )
+                if not path_to_stair:
+                    continue
+                if len(path_to_stair) < best_length:
+                    best_length = len(path_to_stair)
+                    best_option = (path_to_stair, exit_cells)
+            
+            if not best_option:
                 return []
             
-            # 添加到楼梯的路径段
+            path_to_stair, exit_cells = best_option
+            
             segment = self._create_path_segment(
                 current_floor_id,
                 floor_node.height,
@@ -148,8 +161,7 @@ class MultiLevelPathPlanner:
             )
             segments.append(segment)
             
-            # 下一层的起点是楼梯出口
-            current_cell = self._get_stair_exit_cell(current_floor_id, next_floor_id, stair_cells)
+            current_cell = self._get_stair_exit_cell(exit_cells)
         
         # 最后一段：从楼梯到目标
         final_floor_id = floor_sequence[-1]
@@ -158,8 +170,8 @@ class MultiLevelPathPlanner:
             final_floor_node,
             current_cell,
             target_cells,
-            blocked=blocked,
-            cost_field=cost_field,
+            blocked=blocked_map.get(final_floor_id),
+            cost_field=cost_fields.get(final_floor_id),
         )
         
         if final_path:
@@ -249,34 +261,27 @@ class MultiLevelPathPlanner:
             # 上楼（通常疏散不会上楼）
             return floor_order[start_idx:target_idx + 1]
     
-    def _find_stair_between_floors(
+    def _stairs_between_floors(
         self,
         from_floor: str,
         to_floor: str,
-    ) -> List[GridCoord]:
-        """找到连接两个楼层的楼梯入口单元格"""
-        for stair_id, connections in self.stair_connections.items():
+    ) -> List[Tuple[List[GridCoord], List[GridCoord]]]:
+        """返回所有连接两个楼层的楼梯入口/出口集合"""
+        candidates: List[Tuple[List[GridCoord], List[GridCoord]]] = []
+        for connections in self.stair_connections.values():
             for conn_from, conn_to, entry_cells, exit_cells in connections:
                 if conn_from == from_floor and conn_to == to_floor:
-                    return entry_cells
-        return []
-    
+                    candidates.append((entry_cells, exit_cells))
+        return candidates
+
     def _get_stair_exit_cell(
         self,
-        from_floor: str,
-        to_floor: str,
-        entry_cells: List[GridCoord],
+        exit_cells: List[GridCoord],
     ) -> GridCoord:
-        """获取楼梯的出口单元格（简化：使用第一个出口单元）"""
-        for stair_id, connections in self.stair_connections.items():
-            for conn_from, conn_to, conn_entry, exit_cells in connections:
-                if conn_from == from_floor and conn_to == to_floor:
-                    # 找到对应的出口
-                    if exit_cells:
-                        return exit_cells[0]
-        
-        # Fallback: 使用入口单元格
-        return entry_cells[0] if entry_cells else (0, 0)
+        """楼梯出口（使用第一个，可扩展为随机）"""
+        if exit_cells:
+            return exit_cells[0]
+        return (0, 0)
     
     def _create_path_segment(
         self,

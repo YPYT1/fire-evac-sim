@@ -11,26 +11,22 @@ from typing import Dict, List, Literal, Optional, Set, Tuple
 from ..core.config import FloorConfig, SimulationSettings
 from ..core.schemas import FireSource, SimReplanRequest, SimStartRequest, SimStartResponse, SimStatusResponse
 from ..sim.fire import build_cost_field, sample_random_fire_positions
-from ..sim.evacuation import EvacuationSimulator
-from ..sim.grid import Grid, load_grid
-from ..sim.multilevel import MultiLevelPathPlanner
+from ..sim.multilevel_evacuation import MultiLevelEvacuationSimulator
 from ..sim.state import SimulationState
 from ..sim.utils import world_to_grid
 
 DEFAULT_MODE = "floor1"
 
 
-def _build_floor_fires(config: dict) -> list[FireSource]:
-    floor_y = float(config.get("floor_y", 0.0))
-    fires: list[FireSource] = []
-    for fire in config.get("fires", []):
-        position = fire.get("position", (0.0, 0.0))
-        if len(position) != 2:
-            continue
-        x, z = float(position[0]), float(position[1])
-        intensity = float(fire.get("intensity", 1.0))
-        fires.append(FireSource(position=(x, floor_y, z), intensity=intensity))
-    return fires
+def _resolve_active_spawn_floors(sim_settings: SimulationSettings, mode: str) -> list[str]:
+    floors = sim_settings.floors or {}
+    if not floors:
+        return [mode]
+    if mode in floors:
+        return [mode]
+    if "floor1" in floors:
+        return ["floor1"]
+    return [next(iter(floors))]
 
 
 def _random_floor_fires(
@@ -109,28 +105,6 @@ def _cost_lookup(grid, fires: list[FireSource], decay: float) -> Dict[tuple[int,
     return lookup
 
 
-def _spawn_cells_from_area(
-    grid,
-    origin_center: tuple[float, float],
-    width: int,
-    depth: int,
-    *,
-    blocked: Optional[set[tuple[int, int]]] = None,
-) -> list[tuple[int, int]]:
-    cx, cz = origin_center
-    gx, gy = world_to_grid(cx, cz, grid.cell_size, grid.origin)
-    half_w = max(1, width // 2)
-    half_d = max(1, depth // 2)
-    cells: list[tuple[int, int]] = []
-    for dz in range(-half_d, half_d + 1):
-        for dx in range(-half_w, half_w + 1):
-            nx, ny = gx + dx, gy + dz
-            if 0 <= nx < grid.width and 0 <= ny < grid.height:
-                if grid.cells[ny][nx].walkable and (not blocked or (nx, ny) not in blocked):
-                    cells.append((nx, ny))
-    return cells
-
-
 class SessionManager:
     """管理仿真会话、后台循环与火点更新。"""
 
@@ -144,7 +118,7 @@ class SessionManager:
         payload: SimStartRequest,
         sim_settings: SimulationSettings,
     ) -> SimStartResponse:
-        """创建仿真会话并启动后台循环（多楼层支持）。"""
+        """创建仿真会话并启动后台循环（真正的多楼层支持）。"""
         self._counter += 1
         session_id = f"demo-{self._counter}"
         tick_hz = sim_settings.tick_hz
@@ -156,19 +130,6 @@ class SessionManager:
         effective_tick_hz = max(1.0, tick_hz * time_scale)
         floor_mode = payload.mode or sim_settings.mode or DEFAULT_MODE
 
-        # 获取楼层配置
-        floor_config = sim_settings.get_floor_config(floor_mode)
-        if not floor_config:
-            # Fallback 到旧配置
-            floor_config = FloorConfig(
-                name="默认楼层",
-                height=0.0,
-                grid_file=sim_settings.map_name,
-                exits=[],
-                spawn_regions=sim_settings.start_regions,
-                fire_zones=[],
-            )
-
         state = SimulationState(
             session_id=session_id,
             tick_hz=effective_tick_hz,
@@ -177,73 +138,81 @@ class SessionManager:
             fire_decay=fire_decay,
         )
 
-        # 加载楼层专属地图
         maps_dir = Path(__file__).resolve().parents[1] / "data" / "maps"
-        map_path = maps_dir / floor_config.grid_file
-        if not map_path.exists():
-            # Fallback 到默认地图
-            map_path = maps_dir / sim_settings.map_name
         
-        grid = load_grid(map_path)
-        engine = EvacuationSimulator(grid)
+        # 使用多楼层引擎
+        multilevel_engine = MultiLevelEvacuationSimulator(sim_settings, maps_dir)
+        active_spawn_floors = _resolve_active_spawn_floors(sim_settings, floor_mode)
+        multilevel_engine.set_active_spawn_floors(active_spawn_floors)
+
+        default_target_floor = None
+        if sim_settings.floors:
+            if floor_mode == "floor1" or "floor1" not in sim_settings.floors:
+                default_target_floor = floor_mode if floor_mode in sim_settings.floors else next(iter(sim_settings.floors))
+            else:
+                default_target_floor = "floor1"
+        goal_override = payload.goals if payload.goals else None
+        multilevel_engine.set_target_strategy(default_target_floor, goal_override)
         
-        # 生成随机火源（基于楼层配置）
-        rng = random.Random()
-        random_fires = _random_floor_fires(grid, floor_config, rng)
-        fires = payload.fires or random_fires
-        if not fires:
-            fires = random_fires
-        state.fires = fires
+        # 在所需楼层生成火源
+        all_fires: List[FireSource] = []
+        blocked_by_floor: Dict[str, Set[Tuple[int, int]]] = {}
+        cost_fields: Dict[str, Dict[Tuple[int, int], float]] = {}
+        fire_levels: Set[str] = set(active_spawn_floors) if active_spawn_floors else set()
+        if not fire_levels and floor_mode:
+            fire_levels.add(floor_mode)
+
+        if sim_settings.floors:
+            rng = random.Random()
+            for floor_id, floor_config in sim_settings.floors.items():
+                grid = multilevel_engine.floor_grids.get(floor_id)
+                if grid is None:
+                    continue
+                floor_fires: List[FireSource] = []
+                if floor_id in fire_levels:
+                    floor_fires = _random_floor_fires(grid, floor_config, rng)
+                    all_fires.extend(floor_fires)
+                blocked_by_floor[floor_id] = _blocked_cells_for_fires(grid, floor_fires)
+                cost_fields[floor_id] = _cost_lookup(grid, floor_fires, fire_decay)
+
+        state.fires = all_fires
         state.speed_mean = payload.agents.speed_mean
         state.speed_std = payload.agents.speed_std
-
-        # 确定目标（出口或楼梯）
-        goals = payload.goals
-        if not goals:
-            # 根据楼层确定目标
-            if floor_config.exits:
-                goals = [exit_cfg["id"] for exit_cfg in floor_config.exits]
-            elif floor_config.stairs:
-                # 如果是高层，目标是楼梯
-                goals = floor_config.stairs
-            else:
-                goals = list(grid.exits.keys())
-        state.goals = list(goals)
         
-        blocked_cells = _blocked_cells_for_fires(grid, fires)
-        cost_lookup = _cost_lookup(grid, fires, fire_decay)
-        
-        # 使用楼层配置的spawn_regions
-        start_regions = floor_config.spawn_regions if floor_config.spawn_regions else sim_settings.start_regions
-        
-        spawned = engine.initialize_agents(
-            payload.agents,
-            start_regions,
-            goals,
-            floor_y=floor_config.height,
-            blocked=blocked_cells,
-            cost_field=cost_lookup,
-            override_start=None,
+        # 初始化多楼层人员（按比例分配）
+        spawned = multilevel_engine.initialize_agents_multilevel(
+            total_count=payload.agents.count,
+            agent_config=payload.agents,
+            blocked_by_floor=blocked_by_floor,
+            cost_fields=cost_fields,
         )
+        
         state.total_agents = spawned
-        state.set_agents(engine.agent_states())
-        state.paths = [[list(point) for point in path] for path in engine.paths()]
+        state.set_agents(multilevel_engine.agent_states())
+        
+        # 获取跨层路径（用于可视化）
+        state.paths = [[list(point) for point in path] for path in multilevel_engine.paths()]
         state.last_updated = datetime.utcnow()
-
+        
+        # 确定最终目标（一层出口）
+        if multilevel_engine.target_goal_ids:
+            state.goals = list(multilevel_engine.target_goal_ids)
+        elif goal_override:
+            state.goals = goal_override
+        
         self._sessions[session_id] = {
             "payload": payload,
             "created_at": datetime.utcnow(),
             "tick_hz": tick_hz,
             "avoidance_strategy": strategy,
             "state": state,
-            "fires": fires,
+            "fires": all_fires,
             "fire_decay": fire_decay,
-            "engine": engine,
-            "grid": grid,
+            "engine": multilevel_engine,
             "floor_mode": floor_mode,
-            "floor_config": floor_config,
-            "blocked_cells": blocked_cells,
-            "cost_lookup": cost_lookup,
+            "sim_settings": sim_settings,
+            "blocked_by_floor": blocked_by_floor,
+            "cost_fields": cost_fields,
         }
         self._start_loop(session_id, state)
         return SimStartResponse(session_id=session_id, tick_hz=state.tick_hz, avoidance_strategy=strategy)
@@ -277,22 +246,53 @@ class SessionManager:
             task.cancel()
 
     def replan(self, payload: SimReplanRequest) -> None:
-        """更新会话火点数据，触发后续重规划。"""
+        """更新会话火点数据，触发后续重规划（多楼层支持）。"""
         session = self._sessions.get(payload.session_id)
         if session is None:
             raise KeyError(payload.session_id)
-        floor_y = float(session.get("floor_y", 0.0))
-        grid = session.get("grid")
+        
+        # 多楼层模式：保持火源原有的 y 坐标（楼层高度）
         normalized: list[FireSource] = []
         for fire in payload.fires:
-            x, _, z = fire.position
-            normalized.append(FireSource(position=(x, floor_y, z), intensity=fire.intensity))
+            x, y, z = fire.position
+            normalized.append(FireSource(position=(x, y, z), intensity=fire.intensity))
+        
         session["fires"] = normalized
         state: SimulationState = session["state"]
         state.fires = normalized
-        if grid is not None:
-            session["blocked_cells"] = _blocked_cells_for_fires(grid, normalized)
-            session["cost_lookup"] = _cost_lookup(grid, normalized, state.fire_decay)
+        
+        # 更新每层的阻塞区域和代价场
+        sim_settings = session.get("sim_settings")
+        if sim_settings and sim_settings.floors:
+            engine = session.get("engine")
+            if isinstance(engine, MultiLevelEvacuationSimulator):
+                prev_blocked: Dict[str, Set[Tuple[int, int]]] = session.get("blocked_by_floor", {})
+                blocked_by_floor: Dict[str, Set[Tuple[int, int]]] = {}
+                cost_fields: Dict[str, Dict[Tuple[int, int], float]] = {}
+                changed_floors: Set[str] = set()
+                
+                for floor_id, floor_config in sim_settings.floors.items():
+                    # 筛选该层的火源
+                    floor_fires = [f for f in normalized if abs(f.position[1] - floor_config.height) < 0.5]
+                    grid = engine.floor_grids.get(floor_id)
+                    if grid:
+                        blocked = _blocked_cells_for_fires(grid, floor_fires)
+                        costs = _cost_lookup(grid, floor_fires, state.fire_decay)
+                        blocked_by_floor[floor_id] = blocked
+                        cost_fields[floor_id] = costs
+                        if blocked != prev_blocked.get(floor_id):
+                            changed_floors.add(floor_id)
+                
+                session["blocked_by_floor"] = blocked_by_floor
+                session["cost_fields"] = cost_fields
+                engine.update_navigation_fields(
+                    blocked_by_floor,
+                    cost_fields,
+                    affected_floors=changed_floors or None,
+                )
+                state.set_agents(engine.agent_states())
+                state.paths = [[list(point) for point in path] for path in engine.paths()]
+        
         session.setdefault("replans", []).append(payload)
 
     def get_state(self, session_id: str) -> Optional[SimulationState]:
@@ -309,11 +309,11 @@ class SessionManager:
                 session = self._sessions.get(session_id)
                 if session is None:
                     break
-                engine: EvacuationSimulator | None = session.get("engine")
+                engine: MultiLevelEvacuationSimulator | None = session.get("engine")
                 if engine is None:
                     await asyncio.sleep(tick_interval)
                     continue
-                engine.step(tick_interval)
+                engine.tick(tick_interval)
                 state.set_agents(engine.agent_states())
                 state.paths = [[list(point) for point in path] for path in engine.paths()]
                 state.tick_count += 1

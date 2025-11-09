@@ -28,6 +28,15 @@ export function updatePaths(group: THREE.Group, paths: number[][][]): void {
   disposeChildren(group);
   ensureResolutionWatcher();
 
+  const palette = [
+    0xff3b30, // vivid red
+    0xffb800, // amber
+    0x32d74b, // green
+    0x0a84ff, // blue
+    0xbf5af2, // purple
+    0xff9f0a, // orange
+  ];
+
   paths.forEach((path, index) => {
     if (!Array.isArray(path) || path.length < 2) {
       return;
@@ -40,11 +49,11 @@ export function updatePaths(group: THREE.Group, paths: number[][][]): void {
     const geometry = new LineGeometry();
     geometry.setPositions(positions);
 
-    const color = new THREE.Color().setHSL((index * 0.618) % 1, 0.65, 0.55);
+    const color = new THREE.Color(palette[index % palette.length]);
     const material = new LineMaterial({
       color,
-      linewidth: 0.06,
-      opacity: 0.85,
+      linewidth: 0.08,
+      opacity: 0.95,
       transparent: true,
       dashed: true,
       dashSize: 0.3,
@@ -98,7 +107,7 @@ function createArrow(color: THREE.Color, from: number[], to: number[]): THREE.Gr
   const shaftGeometry = new THREE.CylinderGeometry(0.05, 0.05, Math.min(length, 1.5), 8, 1);
   const shaftMaterial = new THREE.MeshStandardMaterial({
     color,
-    emissive: color.clone().multiplyScalar(0.6),
+    emissive: color.clone().multiplyScalar(0.8),
     metalness: 0.2,
     roughness: 0.4,
   });
@@ -109,7 +118,7 @@ function createArrow(color: THREE.Color, from: number[], to: number[]): THREE.Gr
   const headGeometry = new THREE.ConeGeometry(0.16, 0.35, 12);
   const headMaterial = new THREE.MeshStandardMaterial({
     color,
-    emissive: color.clone().multiplyScalar(0.8),
+    emissive: color.clone().multiplyScalar(1.0),
     metalness: 0.3,
     roughness: 0.2,
   });
