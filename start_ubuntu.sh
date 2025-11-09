@@ -87,16 +87,17 @@ ensure_basic_packages() {
   queue_pkg git
   queue_pkg ca-certificates
   queue_pkg build-essential
-  queue_pkg pkg-config
-  queue_pkg python3
-  queue_pkg python3-venv
-  queue_pkg python3-pip
-  queue_pkg python3-dev
-  queue_pkg software-properties-common
-  queue_pkg unzip
-  queue_pkg libffi-dev
-  queue_pkg cmake
-  run_apt_install
+queue_pkg pkg-config
+queue_pkg python3
+queue_pkg python3-venv
+queue_pkg python3-pip
+queue_pkg python3-dev
+queue_pkg software-properties-common
+queue_pkg unzip
+queue_pkg libffi-dev
+queue_pkg cmake
+queue_pkg netcat-openbsd
+run_apt_install
 }
 
 PYTHON_CMD=""
@@ -345,6 +346,22 @@ ensure_python_packages() {
   done
 }
 
+wait_for_port() {
+  local name=$1
+  local host=$2
+  local port=$3
+  local retries=${4:-40}
+  for ((i = 1; i <= retries; i++)); do
+    if nc -z "${host}" "${port}" >/dev/null 2>&1; then
+      info "${name} 监听 ${host}:${port}"
+      return 0
+    fi
+    sleep 1
+  done
+  warn "${name} 在 ${retries}s 内未监听 ${host}:${port}，请检查日志。"
+  return 1
+}
+
 start_services() {
   mkdir -p "${LOG_DIR}"
   : >"${BACKEND_LOG}"
@@ -370,10 +387,12 @@ start_services() {
   info "启动后端（uvicorn）"
   uv run uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --reload --log-level info >"${BACKEND_LOG}" 2>&1 &
   BACK_PID=$!
+  wait_for_port "后端" 127.0.0.1 8000 || true
 
   info "启动前端（bun dev）"
   (cd "${ROOT_DIR}/frontend" && bun dev --host) >"${FRONTEND_LOG}" 2>&1 &
   FRONT_PID=$!
+  wait_for_port "前端" 127.0.0.1 5173 || true
 
   sleep 2
   if command -v xdg-open >/dev/null 2>&1; then
