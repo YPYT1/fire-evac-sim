@@ -2,7 +2,8 @@
 
 from __future__ import annotations
 
-from typing import Iterable, List
+import random
+from typing import Iterable, List, Sequence
 
 import numpy as np
 
@@ -26,23 +27,43 @@ def build_cost_field(grid: Grid, fires: Iterable[FireSource], decay: float = 0.9
     return cost
 
 
-def sample_random_fire_positions(grid: Grid, count: int) -> List[FireSource]:
-    """随机抽样火源位置，占位实现将从可行走区域均匀选择。"""
+def sample_random_fire_positions(
+    grid: Grid,
+    count: int,
+    *,
+    floor_y: float = 0.0,
+    intensity_range: Sequence[float] = (0.8, 1.2),
+    rng: random.Random | None = None,
+) -> List[FireSource]:
+    """从全局可行走区域随机生成指定数量的火源。"""
 
-    fires: List[FireSource] = []
-    step = max(1, (grid.width * grid.height) // max(count, 1))
-    idx = 0
+    rng = rng or random.Random()
+    walkable: List[tuple[int, int]] = []
     for y in range(grid.height):
         for x in range(grid.width):
-            cell = grid.cells[y][x]
-            if not cell.walkable:
-                continue
-            if idx % step == 0 and len(fires) < count:
-                fires.append(
-                    FireSource(
-                        position=(x * grid.cell_size, 0.0, y * grid.cell_size),
-                        intensity=1.0,
-                    )
-                )
-            idx += 1
+            if grid.cells[y][x].walkable:
+                walkable.append((x, y))
+
+    if not walkable or count <= 0:
+        return []
+
+    min_intensity = float(intensity_range[0]) if len(intensity_range) >= 1 else 0.8
+    max_intensity = float(intensity_range[1]) if len(intensity_range) >= 2 else min_intensity
+    if max_intensity < min_intensity:
+        min_intensity, max_intensity = max_intensity, min_intensity
+
+    unique_count = min(count, len(walkable))
+    selected = rng.sample(walkable, unique_count)
+    while len(selected) < count:
+        selected.append(rng.choice(walkable))
+
+    fires: List[FireSource] = []
+    for x, y in selected:
+        intensity = rng.uniform(min_intensity, max_intensity)
+        fires.append(
+            FireSource(
+                position=(x * grid.cell_size, floor_y, y * grid.cell_size),
+                intensity=float(intensity),
+            )
+        )
     return fires

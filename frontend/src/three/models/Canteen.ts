@@ -47,14 +47,21 @@ export class Canteen {
   }
 
   private createOuterWalls(floorY: number, hasDoors: boolean): void {
+    const isSecondFloor = floorY === this.wallHeight;
+    const frontDoorWidth = isSecondFloor ? this.doorWidth + 2 : this.doorWidth;
+    const frontDoorHeight = isSecondFloor ? this.doorHeight : this.doorHeight;
+    const allowFrontDoor = hasDoors || isSecondFloor;
+    const allowBackDoor = hasDoors;
+    const allowSideDoor = hasDoors;
+
     const frontWall = new Wall(
       this.totalWidth,
       this.wallHeight,
       this.wallThickness,
       this.wallColor,
-      hasDoors,
-      this.doorWidth,
-      this.doorHeight,
+      allowFrontDoor,
+      frontDoorWidth,
+      frontDoorHeight,
       0
     );
     frontWall.setPosition(0, floorY, this.totalDepth / 2);
@@ -65,7 +72,7 @@ export class Canteen {
       this.wallHeight,
       this.wallThickness,
       this.wallColor,
-      hasDoors,
+      allowBackDoor,
       this.doorWidth,
       this.doorHeight,
       0
@@ -78,7 +85,7 @@ export class Canteen {
       this.wallHeight,
       this.wallThickness,
       this.wallColor,
-      hasDoors,
+      allowSideDoor,
       this.doorWidth,
       this.doorHeight,
       0
@@ -92,7 +99,7 @@ export class Canteen {
       this.wallHeight,
       this.wallThickness,
       this.wallColor,
-      hasDoors,
+      allowSideDoor,
       this.doorWidth,
       this.doorHeight,
       0
@@ -232,16 +239,24 @@ export class Canteen {
 
   private createSeating(floorY: number): void {
     const offsets = [-8, 0, 8];
-    const stairX = floorY === this.wallHeight ? -10 : floorY === this.wallHeight * 2 ? 10 : null;
+    const stairZones = this.getStairLayout()
+      .filter((layout) => layout.occupiedLevels.includes(floorY))
+      .map(({ x, z, clearanceX, clearanceZ }) => ({
+        x,
+        z,
+        clearanceX: clearanceX ?? 6,
+        clearanceZ: clearanceZ ?? 6,
+      }));
 
     offsets.forEach((x) => {
       offsets.forEach((z) => {
         if (Math.abs(x) < 1 && Math.abs(z) < 1) return;
 
-        if (stairX !== null) {
-          const inHole = Math.abs(x - stairX) < 8 && Math.abs(z) < 6;
-          if (inHole) return;
-        }
+        const nearStair = stairZones.some(
+          (stair) =>
+            Math.abs(x - stair.x) < stair.clearanceX && Math.abs(z - stair.z) < stair.clearanceZ
+        );
+        if (nearStair) return;
 
         const set = this.createDiningSet();
         set.position.set(x, floorY, z);
@@ -302,6 +317,14 @@ export class Canteen {
       mesh.position.y = floorY + 0.01;
       mesh.receiveShadow = true;
       this.group.add(mesh);
+
+      const apronMaterial = new THREE.MeshStandardMaterial({ color: 0xe2e8f0, side: THREE.DoubleSide });
+      const apronGeometry = new THREE.PlaneGeometry(this.totalWidth, 12);
+      const apron = new THREE.Mesh(apronGeometry, apronMaterial);
+      apron.rotation.x = -Math.PI / 2;
+      apron.position.set(0, floorY + 0.009, -this.totalDepth / 2 - 6);
+      apron.receiveShadow = true;
+      this.group.add(apron);
       return;
     }
 
@@ -332,33 +355,130 @@ export class Canteen {
     mesh.position.y = floorY + 0.01;
     mesh.receiveShadow = true;
     this.group.add(mesh);
+
   }
 
   private getStairHoles(
     floorY: number
   ): Array<{ x: number; z: number; width: number; depth: number }> {
-    const stairHoleWidth = 5;
-    const stairHoleDepth = 8;
-    const holes: Array<{ x: number; z: number; width: number; depth: number }> = [];
-    if (floorY === this.wallHeight) {
-      holes.push({ x: -10, z: 0, width: stairHoleWidth, depth: stairHoleDepth });
-    }
-    if (floorY === this.wallHeight * 2) {
-      holes.push({ x: 10, z: 0, width: stairHoleWidth, depth: stairHoleDepth });
-    }
-    return holes;
+    const defaultWidth = 5;
+    const defaultDepth = 8;
+    return this.getStairLayout()
+      .filter(({ holeLevels }) => holeLevels.includes(floorY))
+      .map(({ x, z, holeX, holeZ, holeWidth, holeDepth }) => ({
+        x: holeX ?? x,
+        z: holeZ ?? z,
+        width: holeWidth ?? defaultWidth,
+        depth: holeDepth ?? defaultDepth,
+      }));
   }
 
   private createStaircases(): void {
-    const staircase1 = new Staircase(5, this.wallHeight, 6, 12, 0xb5aa94);
-    staircase1.setPosition(-10, 0, 0);
-    staircase1.setRotation(0, Math.PI / 2, 0);
-    this.group.add(staircase1.getGroup());
+    this.getStairLayout().forEach(
+      ({ x, z, rotation, baseLevels, width, depth, steps, color }) => {
+        baseLevels.forEach((baseY) => {
+          const staircase = new Staircase(
+            width ?? 5,
+            this.wallHeight,
+            depth ?? 6,
+            steps ?? 12,
+            color ?? 0xb5aa94
+          );
+          staircase.setPosition(x, baseY, z);
+          staircase.setRotation(0, rotation, 0);
+          this.group.add(staircase.getGroup());
+        });
+      }
+    );
+  }
 
-    const staircase2 = new Staircase(5, this.wallHeight, 6, 12, 0xb5aa94);
-    staircase2.setPosition(10, this.wallHeight, 0);
-    staircase2.setRotation(0, -Math.PI / 2, 0);
-    this.group.add(staircase2.getGroup());
+  private getStairLayout(): Array<{
+    x: number;
+    z: number;
+    rotation: number;
+    baseLevels: number[];
+    holeLevels: number[];
+    occupiedLevels: number[];
+    width?: number;
+    depth?: number;
+    steps?: number;
+    color?: number;
+    clearanceX?: number;
+    clearanceZ?: number;
+    holeX?: number;
+    holeZ?: number;
+    holeWidth?: number;
+    holeDepth?: number;
+  }> {
+    type StairConfig = {
+      x: number;
+      z: number;
+      rotation: number;
+      baseLevels: number[];
+      holeLevels: number[];
+      occupiedLevels: number[];
+      width?: number;
+      depth?: number;
+      steps?: number;
+      color?: number;
+      clearanceX?: number;
+      clearanceZ?: number;
+      holeX?: number;
+      holeZ?: number;
+      holeWidth?: number;
+      holeDepth?: number;
+    };
+    const offsetX = this.totalWidth / 2 - 7;
+    const sharedBaseLevels = [0, this.wallHeight];
+    const sharedHoleLevels = [this.wallHeight, this.wallHeight * 2];
+    const sharedOccupiedLevels = [0, this.wallHeight, this.wallHeight * 2];
+
+    const layouts: StairConfig[] = [
+      {
+        x: -offsetX,
+        z: 0,
+        rotation: Math.PI / 2,
+        baseLevels: sharedBaseLevels,
+        holeLevels: sharedHoleLevels,
+        occupiedLevels: sharedOccupiedLevels,
+        clearanceX: 6,
+        clearanceZ: 6,
+      },
+      {
+        x: offsetX,
+        z: 0,
+        rotation: -Math.PI / 2,
+        baseLevels: sharedBaseLevels,
+        holeLevels: sharedHoleLevels,
+        occupiedLevels: sharedOccupiedLevels,
+        clearanceX: 6,
+        clearanceZ: 6,
+      },
+    ];
+
+    const externalWidth = 6;
+    const externalDepth = 12;
+    const externalSteps = 10;
+    const stepDepth = externalDepth / externalSteps;
+    const topOffset = externalDepth / 2 - stepDepth / 2;
+    const connectOffset = 0.0;
+    const buildingFront = -this.totalDepth / 2;
+    const externalCenterZ = buildingFront + connectOffset - topOffset;
+    layouts.push({
+      x: 0,
+      z: externalCenterZ,
+      rotation: 0,
+      baseLevels: [0],
+      holeLevels: [],
+      occupiedLevels: [0, this.wallHeight],
+      width: externalWidth,
+      depth: externalDepth,
+      steps: externalSteps,
+      clearanceX: 6,
+      clearanceZ: 8,
+    });
+
+    return layouts;
   }
 
   getGroup(): THREE.Group {

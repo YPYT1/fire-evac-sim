@@ -14,7 +14,7 @@ class SimulationState:
     """内存态的仿真快照。后续可替换为 numpy/numba 数据结构。"""
 
     session_id: str
-    tick_hz: int
+    tick_hz: float
     agents: Dict[int, AgentState] = field(default_factory=dict)
     fires: List[FireSource] = field(default_factory=list)
     goals: List[str] = field(default_factory=list)

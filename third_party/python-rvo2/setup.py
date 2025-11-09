@@ -31,7 +31,8 @@ extensions = [
 ]
 
 setup(
-    name="pyrvo2",
+    name="python-rvo2",
+    version="0.0.0",
     ext_modules=cythonize(extensions),
     cmdclass={'build_ext': BuildRvo2Ext},
     classifiers=[
@@ -41,9 +42,8 @@ setup(
         'Intended Audience :: Information Technology',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.11',
         'Programming Language :: Cython',
         'Topic :: Games/Entertainment :: Simulation',
         'Topic :: Software Development :: Libraries :: Python Modules',

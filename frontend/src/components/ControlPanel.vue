@@ -18,6 +18,14 @@
         Tick Hz
         <input type="number" min="1" v-model.number="tickHz" />
       </label>
+      <label class="form__field">
+        播放速度
+        <select v-model.number="speedMultiplier">
+          <option v-for="option in speedOptions" :key="option.value" :value="option.value">
+            {{ option.label }}
+          </option>
+        </select>
+      </label>
       <button type="submit" :disabled="isRunning || starting">启动仿真</button>
   </form>
     <p class="hint">选择不同楼层可预览对应高度的疏散路径与火点分布。</p>
@@ -38,6 +46,12 @@ const mode = computed({
 });
 const agents = ref(200);
 const tickHz = ref(20);
+const speedOptions = [
+  { label: '1x', value: 1 },
+  { label: '1.5x', value: 1.5 },
+  { label: '2x', value: 2 },
+];
+const speedMultiplier = ref(1);
 const starting = ref(false);
 let socket: WebSocket | null = null;
 
@@ -58,6 +72,7 @@ async function onStart() {
         speed_mean: 1.3,
         speed_std: 0.2,
       },
+      time_scale: speedMultiplier.value,
     });
     store.tickHz = response.tick_hz;
     store.setMode(mode.value);

@@ -4,12 +4,13 @@ from __future__ import annotations
 
 import asyncio
 from datetime import datetime
+import random
 from pathlib import Path
 from typing import Dict, Literal, Optional
 
 from ..core.config import SimulationSettings
 from ..core.schemas import FireSource, SimReplanRequest, SimStartRequest, SimStartResponse, SimStatusResponse
-from ..sim.fire import build_cost_field
+from ..sim.fire import build_cost_field, sample_random_fire_positions
 from ..sim.evacuation import EvacuationSimulator
 from ..sim.grid import load_grid
 from ..sim.state import SimulationState
@@ -20,28 +21,22 @@ FLOOR_CONFIGS = {
     "floor1": {
         "name": "一层",
         "floor_y": 0.0,
-        "fires": [
-            {"position": (-12.0, 6.0), "intensity": 1.0},
-            {"position": (10.0, -4.0), "intensity": 0.8},
-        ],
+        "fires": [],
+        "random_fire": {"count": 2, "intensity_range": (0.9, 1.4)},
         "spawn_area": None,
     },
     "floor2": {
         "name": "二层",
         "floor_y": FLOOR_HEIGHT,
-        "fires": [
-            {"position": (-8.0, -10.0), "intensity": 0.9},
-            {"position": (12.0, 8.0), "intensity": 0.7},
-        ],
+        "fires": [],
+        "random_fire": {"count": 2, "intensity_range": (0.9, 1.3)},
         "spawn_area": {"center": (-10.0, 0.0), "width": 10, "depth": 18},
     },
     "floor3": {
         "name": "三层",
         "floor_y": FLOOR_HEIGHT * 2,
-        "fires": [
-            {"position": (-6.0, 4.0), "intensity": 0.85},
-            {"position": (14.0, -12.0), "intensity": 0.75},
-        ],
+        "fires": [],
+        "random_fire": {"count": 3, "intensity_range": (0.95, 1.35)},
         "spawn_area": {"center": (10.0, 0.0), "width": 10, "depth": 18},
     },
 }
@@ -59,6 +54,30 @@ def _build_floor_fires(config: dict) -> list[FireSource]:
         intensity = float(fire.get("intensity", 1.0))
         fires.append(FireSource(position=(x, floor_y, z), intensity=intensity))
     return fires
+
+
+def _random_floor_fires(grid, config: dict, floor_y: float) -> list[FireSource]:
+    random_cfg = config.get("random_fire")
+    if not random_cfg:
+        return []
+    count = max(1, int(random_cfg.get("count", 1)))
+    intensity_cfg = random_cfg.get("intensity_range", (1.0, 1.2))
+    if isinstance(intensity_cfg, (list, tuple)) and len(intensity_cfg) >= 2:
+        min_intensity = float(intensity_cfg[0])
+        max_intensity = float(intensity_cfg[1])
+    else:
+        value = float(intensity_cfg)
+        min_intensity = value
+        max_intensity = value
+    seed = random_cfg.get("seed")
+    rng = random.Random(seed) if seed is not None else random.Random()
+    return sample_random_fire_positions(
+        grid,
+        count,
+        floor_y=floor_y,
+        intensity_range=(min_intensity, max_intensity),
+        rng=rng,
+    )
 
 
 def _blocked_cells_for_fires(grid, fires: list[FireSource], radius: int = 3) -> set[tuple[int, int]]:
@@ -85,7 +104,14 @@ def _cost_lookup(grid, fires: list[FireSource], decay: float) -> Dict[tuple[int,
     return lookup
 
 
-def _spawn_cells_from_area(grid, origin_center: tuple[float, float], width: int, depth: int) -> list[tuple[int, int]]:
+def _spawn_cells_from_area(
+    grid,
+    origin_center: tuple[float, float],
+    width: int,
+    depth: int,
+    *,
+    blocked: Optional[set[tuple[int, int]]] = None,
+) -> list[tuple[int, int]]:
     cx, cz = origin_center
     gx, gy = world_to_grid(cx, cz, grid.cell_size, grid.origin)
     half_w = max(1, width // 2)
@@ -95,7 +121,7 @@ def _spawn_cells_from_area(grid, origin_center: tuple[float, float], width: int,
         for dx in range(-half_w, half_w + 1):
             nx, ny = gx + dx, gy + dz
             if 0 <= nx < grid.width and 0 <= ny < grid.height:
-                if grid.cells[ny][nx].walkable:
+                if grid.cells[ny][nx].walkable and (not blocked or (nx, ny) not in blocked):
                     cells.append((nx, ny))
     return cells
 
@@ -120,26 +146,35 @@ class SessionManager:
         default_strategy = sim_settings.avoidance_strategy
         fire_decay = sim_settings.fire_decay
         strategy = payload.avoidance_strategy or default_strategy
+        requested_scale = getattr(payload, "time_scale", 1.0) or 1.0
+        time_scale = max(0.25, min(float(requested_scale), 4.0))
+        effective_tick_hz = max(1.0, tick_hz * time_scale)
         floor_mode = payload.mode or sim_settings.mode or DEFAULT_MODE
         floor_config = FLOOR_CONFIGS.get(floor_mode, FLOOR_CONFIGS[DEFAULT_MODE])
         floor_y = float(floor_config.get("floor_y", 0.0))
 
         state = SimulationState(
             session_id=session_id,
-            tick_hz=tick_hz,
+            tick_hz=effective_tick_hz,
             goals=payload.goals,
             total_agents=payload.agents.count,
             fire_decay=fire_decay,
         )
+        map_path = Path(__file__).resolve().parents[1] / "data" / "maps" / sim_settings.map_name
+        grid = load_grid(map_path)
+        engine = EvacuationSimulator(grid)
         default_fires = _build_floor_fires(floor_config)
-        fires = payload.fires or default_fires
+        random_fires = _random_floor_fires(grid, floor_config, floor_y)
+        base_fires: list[FireSource] = list(default_fires)
+        if random_fires:
+            base_fires.extend(random_fires)
+        fires = payload.fires or base_fires
+        if not fires:
+            fires = random_fires or default_fires
         state.fires = fires
         state.speed_mean = payload.agents.speed_mean
         state.speed_std = payload.agents.speed_std
 
-        map_path = Path(__file__).resolve().parents[1] / "data" / "maps" / sim_settings.map_name
-        grid = load_grid(map_path)
-        engine = EvacuationSimulator(grid)
         goals = payload.goals or sim_settings.goals
         if not goals:
             goals = list(grid.exits.keys())
@@ -153,7 +188,13 @@ class SessionManager:
             center = spawn_cfg.get("center", (0.0, 0.0))
             width = int(spawn_cfg.get("width", 4))
             depth = int(spawn_cfg.get("depth", 8))
-            override_start = _spawn_cells_from_area(grid, (float(center[0]), float(center[1])), width, depth) or None
+            override_start = _spawn_cells_from_area(
+                grid,
+                (float(center[0]), float(center[1])),
+                width,
+                depth,
+                blocked=blocked_cells,
+            ) or None
             start_regions = []  # 楼层出生点单独指定
         spawned = engine.initialize_agents(
             payload.agents,
@@ -186,7 +227,7 @@ class SessionManager:
             "cost_lookup": cost_lookup,
         }
         self._start_loop(session_id, state)
-        return SimStartResponse(session_id=session_id, tick_hz=tick_hz, avoidance_strategy=strategy)
+        return SimStartResponse(session_id=session_id, tick_hz=state.tick_hz, avoidance_strategy=strategy)
 
     def status(self, session_id: str) -> SimStatusResponse:
         """返回仿真当前状态指标。"""

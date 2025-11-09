@@ -34,13 +34,19 @@ class SimStartRequest(BaseModel):
         default=None,
         description="可选的避障策略覆盖项，缺省时使用配置文件默认值。",
     )
+    time_scale: float = Field(
+        default=1.0,
+        ge=0.25,
+        le=4.0,
+        description="仿真时间倍率，>1 即快进。",
+    )
 
 
 class SimStartResponse(BaseModel):
     """启动仿真响应。"""
 
     session_id: str
-    tick_hz: int
+    tick_hz: float
     avoidance_strategy: Literal["rvo2", "rvo2_py", "simple"]
 
 
@@ -70,7 +76,7 @@ class SimStatusResponse(BaseModel):
     congestion_ratio: float
     updated_at: datetime
     avoidance_strategy: Literal["rvo2", "rvo2_py", "simple"]
-    tick_hz: int
+    tick_hz: float
     speed_mean: float
     speed_std: float
     fire_decay: float

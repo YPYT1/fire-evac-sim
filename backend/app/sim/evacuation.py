@@ -125,6 +125,7 @@ class EvacuationSimulator:
     if not exits:
       return 0
 
+    blocked_set = set(blocked or [])
     candidates: List[GridCoord] = []
     if override_start:
       candidates.extend(list(override_start))
@@ -144,6 +145,21 @@ class EvacuationSimulator:
         for x in range(self.grid.width):
           if self.grid.cells[y][x].walkable:
             candidates.append((x, y))
+
+    if blocked_set:
+      candidates = [cell for cell in candidates if cell not in blocked_set]
+
+    if not candidates:
+      # 若所有候选都与火源冲突，则再次遍历全局找可用点
+      for y in range(self.grid.height):
+        for x in range(self.grid.width):
+          if self.grid.cells[y][x].walkable and (x, y) not in blocked_set:
+            candidates.append((x, y))
+
+    if not candidates:
+      return 0
+
+    self.rng.shuffle(candidates)
 
     spawned = 0
     self.tracks.clear()

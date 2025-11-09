@@ -17,6 +17,12 @@ map:
       rect: [59, 28, 1, 4]
     - id: west_door
       rect: [0, 28, 1, 4]
+    - id: west_stair_exit
+      rect: [6, 27, 2, 6]
+    - id: east_stair_exit
+      rect: [52, 27, 2, 6]
+    - id: south_stair_exit
+      rect: [26, 0, 8, 2]
 
 agents:
   count: 240
@@ -65,3 +71,6 @@ goals:
   - south_door
   - east_door
   - west_door
+  - west_stair_exit
+  - east_stair_exit
+  - south_stair_exit

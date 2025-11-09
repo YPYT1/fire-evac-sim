@@ -17,6 +17,7 @@ export interface SimStartPayload {
     speed_std: number;
   };
   goals?: string[];
+  time_scale?: number;
 }
 
 export interface SimStartResponse {

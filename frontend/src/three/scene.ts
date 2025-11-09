@@ -17,9 +17,15 @@ export function createScene(canvas: HTMLCanvasElement): SceneBundle {
   renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  if ('outputColorSpace' in renderer) {
+    (renderer as any).outputColorSpace = THREE.SRGBColorSpace;
+  }
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.1;
 
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color(0xffffff);
+  scene.background = new THREE.Color(0xf6f8fb);
+  scene.fog = new THREE.Fog(0xf6f8fb, 150, 320);
 
   const camera = new THREE.PerspectiveCamera(60, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
   camera.position.set(0, 75, 90);
@@ -33,10 +39,10 @@ export function createScene(canvas: HTMLCanvasElement): SceneBundle {
   controls.maxDistance = 160;
   controls.target.set(0, 12, 0);
 
-  const ambient = new THREE.AmbientLight(0xffffff, 0.4);
-  scene.add(ambient);
+  const hemi = new THREE.HemisphereLight(0xddebf9, 0x66707a, 0.4);
+  scene.add(hemi);
 
-  const directional = new THREE.DirectionalLight(0xffffff, 0.8);
+  const directional = new THREE.DirectionalLight(0xfff6e5, 0.85);
   directional.position.set(40, 80, 30);
   directional.castShadow = true;
   directional.shadow.mapSize.set(2048, 2048);
@@ -48,9 +54,21 @@ export function createScene(canvas: HTMLCanvasElement): SceneBundle {
   directional.shadow.camera.bottom = -20;
   scene.add(directional);
 
-  const fill = new THREE.DirectionalLight(0xffffff, 0.3);
-  fill.position.set(-60, 50, -40);
-  scene.add(fill);
+  const rim = new THREE.DirectionalLight(0xc9ddff, 0.35);
+  rim.position.set(-60, 30, -40);
+  scene.add(rim);
+
+  const groundGeometry = new THREE.PlaneGeometry(220, 220);
+  const groundMaterial = new THREE.MeshStandardMaterial({
+    color: 0xe2e8f0,
+    roughness: 0.9,
+    metalness: 0.05,
+  });
+  const ground = new THREE.Mesh(groundGeometry, groundMaterial);
+  ground.rotation.x = -Math.PI / 2;
+  ground.position.y = -0.01;
+  ground.receiveShadow = true;
+  scene.add(ground);
 
   const gridHelper = new THREE.GridHelper(120, 60, 0xbcd2f8, 0xe2e8f0);
   scene.add(gridHelper);

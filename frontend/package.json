@@ -39,6 +39,7 @@
     "@types/three": "^0.180.0",
     "pinia": "^3.0.3",
     "three": "^0.180.0",
+    "three-nebula": "^10.0.3",
     "vue": "^3.5.22",
     "vue-router": "^4.6.3"
   }
