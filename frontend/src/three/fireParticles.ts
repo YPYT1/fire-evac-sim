@@ -37,6 +37,7 @@ function createFireTexture(size = 256): THREE.Texture {
     throw new Error('Unable to create fire texture canvas context');
   }
 
+  // 创建带噪声的径向渐变
   const gradient = context.createRadialGradient(
     size / 2,
     size / 2,
@@ -45,14 +46,29 @@ function createFireTexture(size = 256): THREE.Texture {
     size / 2,
     size * 0.48,
   );
-  gradient.addColorStop(0, 'rgba(255,255,255,0.95)');
-  gradient.addColorStop(0.2, 'rgba(255,214,102,0.95)');
-  gradient.addColorStop(0.45, 'rgba(255,127,39,0.8)');
-  gradient.addColorStop(0.7, 'rgba(220,30,30,0.5)');
+  
+  // 更丰富的颜色过渡：白芯 -> 金黄 -> 橙红 -> 深红 -> 透明
+  gradient.addColorStop(0, 'rgba(255,255,255,1.0)');
+  gradient.addColorStop(0.15, 'rgba(255,245,200,0.98)');
+  gradient.addColorStop(0.3, 'rgba(255,210,80,0.95)');
+  gradient.addColorStop(0.5, 'rgba(255,140,40,0.85)');
+  gradient.addColorStop(0.7, 'rgba(235,70,30,0.6)');
+  gradient.addColorStop(0.85, 'rgba(180,30,20,0.3)');
   gradient.addColorStop(1, 'rgba(30,0,0,0)');
 
   context.fillStyle = gradient;
   context.fillRect(0, 0, size, size);
+
+  // 添加噪声效果增加真实感
+  const imageData = context.getImageData(0, 0, size, size);
+  const data = imageData.data;
+  for (let i = 0; i < data.length; i += 4) {
+    const noise = (Math.random() - 0.5) * 25;
+    data[i] = Math.max(0, Math.min(255, data[i] + noise));
+    data[i + 1] = Math.max(0, Math.min(255, data[i + 1] + noise * 0.8));
+    data[i + 2] = Math.max(0, Math.min(255, data[i + 2] + noise * 0.6));
+  }
+  context.putImageData(imageData, 0, 0);
 
   const texture = new THREE.CanvasTexture(canvas);
   texture.name = 'FireParticleTexture';
@@ -131,41 +147,48 @@ export class FireParticleManager {
   private createEmitterSet(position: [number, number, number], intensity: number): FireEmitterEntry {
     const flame = new EmitterCtor();
 
-    const rateParticles = lerp(35, 70, Math.min(intensity, 2));
-    flame.setRate(new RateCtor(new SpanCtor(rateParticles), new SpanCtor(0.008, 0.012)));
+    // 增加粒子数量和随机性
+    const rateParticles = lerp(45, 85, Math.min(intensity, 2));
+    flame.setRate(new RateCtor(new SpanCtor(rateParticles * 0.9, rateParticles * 1.1), new SpanCtor(0.006, 0.014)));
 
     flame.addInitializers([
-      new PositionCtor(new SphereZoneCtor(0, 0, 0, 0.6)),
-      new LifeCtor(0.8, 1.5),
+      // 增大初始发射区域，增加随机性
+      new PositionCtor(new SphereZoneCtor(0, 0, 0, 0.8)),
+      new LifeCtor(0.7, 1.8),
       new BodySpriteCtor(this.texture),
+      // 添加横向随机速度，模拟火焰摆动
       new VelocityCtor(
-        new Vector3DCtor(0, lerp(14, 24, intensity), 0),
-        new SpanCtor(0.6, 1.4),
+        new Vector3DCtor(0, lerp(16, 28, intensity), 0),
+        new SpanCtor(0.8, 1.6),
       ),
     ]);
 
     flame.addBehaviours([
       new AlphaCtor(1, 0),
-      new ColorCtor('#ffd966', '#ff4d00'),
-      new ScaleCtor(lerp(0.8, 1.2, intensity), lerp(1.6, 2.2, intensity)),
+      // 更丰富的颜色过渡：金黄 -> 橙红 -> 深红
+      new ColorCtor(['#fff5c8', '#ffd250', '#ff8c28', '#eb461e'], [0, 0.3, 0.6, 1.0]),
+      new ScaleCtor(lerp(0.9, 1.4, intensity), lerp(1.8, 2.6, intensity)),
     ]);
 
     flame.position.set(position[0], position[1] + 0.5, position[2]);
 
+    // 增强烟雾效果
     const smoke = new EmitterCtor();
-    smoke.setRate(new RateCtor(new SpanCtor(18, 32), new SpanCtor(0.015, 0.02)));
+    smoke.setRate(new RateCtor(new SpanCtor(22, 38), new SpanCtor(0.012, 0.022)));
     smoke.addInitializers([
-      new PositionCtor(new SphereZoneCtor(0, 0, 0, 0.8)),
-      new LifeCtor(1.2, 2.4),
+      new PositionCtor(new SphereZoneCtor(0, 0, 0, 1.0)),
+      new LifeCtor(1.4, 2.8),
       new BodySpriteCtor(this.texture),
-      new VelocityCtor(new Vector3DCtor(0, lerp(6, 10, intensity), 0), new SpanCtor(0.3, 0.6)),
+      // 烟雾添加横向扩散
+      new VelocityCtor(new Vector3DCtor(0, lerp(7, 12, intensity), 0), new SpanCtor(0.4, 0.8)),
     ]);
     smoke.addBehaviours([
-      new AlphaCtor(0.35, 0),
-      new ColorCtor('#555555', '#111111'),
-      new ScaleCtor(lerp(1.2, 1.6, intensity), lerp(2.5, 3.2, intensity)),
+      new AlphaCtor(0.4, 0),
+      // 烟雾颜色从灰到深灰到黑
+      new ColorCtor(['#888888', '#444444', '#1a1a1a'], [0, 0.5, 1.0]),
+      new ScaleCtor(lerp(1.4, 1.9, intensity), lerp(2.8, 3.6, intensity)),
     ]);
-    smoke.position.set(position[0], position[1] + 1.2, position[2]);
+    smoke.position.set(position[0], position[1] + 1.4, position[2]);
 
     return { flame, smoke, intensity };
   }

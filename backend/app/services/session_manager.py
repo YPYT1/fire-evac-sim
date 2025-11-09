@@ -6,40 +6,17 @@ import asyncio
 from datetime import datetime
 import random
 from pathlib import Path
-from typing import Dict, Literal, Optional
+from typing import Dict, List, Literal, Optional, Set, Tuple
 
-from ..core.config import SimulationSettings
+from ..core.config import FloorConfig, SimulationSettings
 from ..core.schemas import FireSource, SimReplanRequest, SimStartRequest, SimStartResponse, SimStatusResponse
 from ..sim.fire import build_cost_field, sample_random_fire_positions
 from ..sim.evacuation import EvacuationSimulator
-from ..sim.grid import load_grid
+from ..sim.grid import Grid, load_grid
+from ..sim.multilevel import MultiLevelPathPlanner
 from ..sim.state import SimulationState
 from ..sim.utils import world_to_grid
 
-FLOOR_HEIGHT = 4.0
-FLOOR_CONFIGS = {
-    "floor1": {
-        "name": "一层",
-        "floor_y": 0.0,
-        "fires": [],
-        "random_fire": {"count": 2, "intensity_range": (0.9, 1.4)},
-        "spawn_area": None,
-    },
-    "floor2": {
-        "name": "二层",
-        "floor_y": FLOOR_HEIGHT,
-        "fires": [],
-        "random_fire": {"count": 2, "intensity_range": (0.9, 1.3)},
-        "spawn_area": {"center": (-10.0, 0.0), "width": 10, "depth": 18},
-    },
-    "floor3": {
-        "name": "三层",
-        "floor_y": FLOOR_HEIGHT * 2,
-        "fires": [],
-        "random_fire": {"count": 3, "intensity_range": (0.95, 1.35)},
-        "spawn_area": {"center": (10.0, 0.0), "width": 10, "depth": 18},
-    },
-}
 DEFAULT_MODE = "floor1"
 
 
@@ -56,28 +33,56 @@ def _build_floor_fires(config: dict) -> list[FireSource]:
     return fires
 
 
-def _random_floor_fires(grid, config: dict, floor_y: float) -> list[FireSource]:
-    random_cfg = config.get("random_fire")
-    if not random_cfg:
-        return []
-    count = max(1, int(random_cfg.get("count", 1)))
-    intensity_cfg = random_cfg.get("intensity_range", (1.0, 1.2))
-    if isinstance(intensity_cfg, (list, tuple)) and len(intensity_cfg) >= 2:
-        min_intensity = float(intensity_cfg[0])
-        max_intensity = float(intensity_cfg[1])
-    else:
-        value = float(intensity_cfg)
-        min_intensity = value
-        max_intensity = value
-    seed = random_cfg.get("seed")
-    rng = random.Random(seed) if seed is not None else random.Random()
-    return sample_random_fire_positions(
-        grid,
-        count,
-        floor_y=floor_y,
-        intensity_range=(min_intensity, max_intensity),
-        rng=rng,
-    )
+def _random_floor_fires(
+    grid: Grid,
+    floor_config: FloorConfig,
+    rng: random.Random | None = None,
+) -> list[FireSource]:
+    """基于楼层配置生成随机火源"""
+    if not floor_config.fire_zones:
+        # 无指定区域，使用全局可行区域
+        count_range = floor_config.fire_count_range
+        count = rng.randint(count_range[0], count_range[1]) if rng else count_range[0]
+        return sample_random_fire_positions(
+            grid,
+            count,
+            floor_y=floor_config.height,
+            intensity_range=(0.8, 1.3),
+            rng=rng,
+        )
+    
+    # 基于 fire_zones 生成
+    fires: list[FireSource] = []
+    count_range = floor_config.fire_count_range
+    total_count = rng.randint(count_range[0], count_range[1]) if rng else count_range[0]
+    
+    for _ in range(total_count):
+        zone = rng.choice(floor_config.fire_zones) if rng else floor_config.fire_zones[0]
+        rect = zone.get("rect")
+        if not rect or len(rect) != 4:
+            continue
+        
+        x0, y0, w, h = rect
+        # 在区域内随机选择可行单元
+        candidates = []
+        for dy in range(h):
+            for dx in range(w):
+                gx, gy = x0 + dx, y0 + dy
+                if 0 <= gx < grid.width and 0 <= gy < grid.height:
+                    if grid.cells[gy][gx].walkable:
+                        candidates.append((gx, gy))
+        
+        if candidates:
+            cell = rng.choice(candidates) if rng else candidates[0]
+            wx = grid.origin[0] + (cell[0] + 0.5) * grid.cell_size
+            wz = grid.origin[2] + (cell[1] + 0.5) * grid.cell_size
+            intensity = rng.uniform(0.8, 1.3) if rng else 1.0
+            fires.append(FireSource(
+                position=(wx, floor_config.height, wz),
+                intensity=intensity,
+            ))
+    
+    return fires
 
 
 def _blocked_cells_for_fires(grid, fires: list[FireSource], radius: int = 3) -> set[tuple[int, int]]:
@@ -139,7 +144,7 @@ class SessionManager:
         payload: SimStartRequest,
         sim_settings: SimulationSettings,
     ) -> SimStartResponse:
-        """创建仿真会话并启动后台循环。"""
+        """创建仿真会话并启动后台循环（多楼层支持）。"""
         self._counter += 1
         session_id = f"demo-{self._counter}"
         tick_hz = sim_settings.tick_hz
@@ -150,8 +155,19 @@ class SessionManager:
         time_scale = max(0.25, min(float(requested_scale), 4.0))
         effective_tick_hz = max(1.0, tick_hz * time_scale)
         floor_mode = payload.mode or sim_settings.mode or DEFAULT_MODE
-        floor_config = FLOOR_CONFIGS.get(floor_mode, FLOOR_CONFIGS[DEFAULT_MODE])
-        floor_y = float(floor_config.get("floor_y", 0.0))
+
+        # 获取楼层配置
+        floor_config = sim_settings.get_floor_config(floor_mode)
+        if not floor_config:
+            # Fallback 到旧配置
+            floor_config = FloorConfig(
+                name="默认楼层",
+                height=0.0,
+                grid_file=sim_settings.map_name,
+                exits=[],
+                spawn_regions=sim_settings.start_regions,
+                fire_zones=[],
+            )
 
         state = SimulationState(
             session_id=session_id,
@@ -160,50 +176,54 @@ class SessionManager:
             total_agents=payload.agents.count,
             fire_decay=fire_decay,
         )
-        map_path = Path(__file__).resolve().parents[1] / "data" / "maps" / sim_settings.map_name
+
+        # 加载楼层专属地图
+        maps_dir = Path(__file__).resolve().parents[1] / "data" / "maps"
+        map_path = maps_dir / floor_config.grid_file
+        if not map_path.exists():
+            # Fallback 到默认地图
+            map_path = maps_dir / sim_settings.map_name
+        
         grid = load_grid(map_path)
         engine = EvacuationSimulator(grid)
-        default_fires = _build_floor_fires(floor_config)
-        random_fires = _random_floor_fires(grid, floor_config, floor_y)
-        base_fires: list[FireSource] = list(default_fires)
-        if random_fires:
-            base_fires.extend(random_fires)
-        fires = payload.fires or base_fires
+        
+        # 生成随机火源（基于楼层配置）
+        rng = random.Random()
+        random_fires = _random_floor_fires(grid, floor_config, rng)
+        fires = payload.fires or random_fires
         if not fires:
-            fires = random_fires or default_fires
+            fires = random_fires
         state.fires = fires
         state.speed_mean = payload.agents.speed_mean
         state.speed_std = payload.agents.speed_std
 
-        goals = payload.goals or sim_settings.goals
+        # 确定目标（出口或楼梯）
+        goals = payload.goals
         if not goals:
-            goals = list(grid.exits.keys())
+            # 根据楼层确定目标
+            if floor_config.exits:
+                goals = [exit_cfg["id"] for exit_cfg in floor_config.exits]
+            elif floor_config.stairs:
+                # 如果是高层，目标是楼梯
+                goals = floor_config.stairs
+            else:
+                goals = list(grid.exits.keys())
         state.goals = list(goals)
+        
         blocked_cells = _blocked_cells_for_fires(grid, fires)
         cost_lookup = _cost_lookup(grid, fires, fire_decay)
-        spawn_cfg = floor_config.get("spawn_area")
-        override_start = None
-        start_regions = sim_settings.start_regions
-        if spawn_cfg:
-            center = spawn_cfg.get("center", (0.0, 0.0))
-            width = int(spawn_cfg.get("width", 4))
-            depth = int(spawn_cfg.get("depth", 8))
-            override_start = _spawn_cells_from_area(
-                grid,
-                (float(center[0]), float(center[1])),
-                width,
-                depth,
-                blocked=blocked_cells,
-            ) or None
-            start_regions = []  # 楼层出生点单独指定
+        
+        # 使用楼层配置的spawn_regions
+        start_regions = floor_config.spawn_regions if floor_config.spawn_regions else sim_settings.start_regions
+        
         spawned = engine.initialize_agents(
             payload.agents,
             start_regions,
             goals,
-            floor_y=floor_y,
+            floor_y=floor_config.height,
             blocked=blocked_cells,
             cost_field=cost_lookup,
-            override_start=override_start,
+            override_start=None,
         )
         state.total_agents = spawned
         state.set_agents(engine.agent_states())
@@ -221,7 +241,6 @@ class SessionManager:
             "engine": engine,
             "grid": grid,
             "floor_mode": floor_mode,
-            "floor_y": floor_y,
             "floor_config": floor_config,
             "blocked_cells": blocked_cells,
             "cost_lookup": cost_lookup,

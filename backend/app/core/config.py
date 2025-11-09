@@ -6,10 +6,40 @@ import logging
 import os
 from functools import lru_cache
 from pathlib import Path
-from typing import Any, Literal
+from typing import Any, Dict, List, Literal, Optional, Tuple
 
 import yaml
 from pydantic import BaseModel, Field, field_validator, ConfigDict
+
+
+class StairConnection(BaseModel):
+    """楼梯连接配置"""
+    from_floor: str
+    to_floor: str
+    entry_cells: List[List[int]]
+    exit_cells: List[List[int]]
+
+
+class StairConfig(BaseModel):
+    """楼梯配置"""
+    name: str
+    width: float
+    depth: float
+    position: Dict[str, float]
+    connections: List[StairConnection]
+
+
+class FloorConfig(BaseModel):
+    """单层配置"""
+    name: str
+    height: float
+    grid_file: str
+    exits: List[Dict[str, Any]] = Field(default_factory=list)
+    stairs: List[str] = Field(default_factory=list)
+    spawn_regions: List[Dict[str, Any]] = Field(default_factory=list)
+    fire_zones: List[Dict[str, Any]] = Field(default_factory=list)
+    agent_ratio: float = Field(default=0.33)
+    fire_count_range: List[int] = Field(default=[1, 3])
 
 
 class SimulationSettings(BaseModel):
@@ -31,12 +61,28 @@ class SimulationSettings(BaseModel):
         default="rvo2",
         description="避障策略，支持 RVO2、rvo2-py 与 simple 简化策略回退。",
     )
+    
+    # 新增多楼层配置
+    floors: Optional[Dict[str, FloorConfig]] = Field(default=None)
+    stairs: Optional[Dict[str, StairConfig]] = Field(default=None)
 
     @field_validator("map_name")
     def _validate_map(cls, value: str) -> str:
         if not value:
             raise ValueError("map_name 不能为空")
         return value
+    
+    def get_floor_config(self, mode: str) -> Optional[FloorConfig]:
+        """获取指定楼层的配置"""
+        if self.floors and mode in self.floors:
+            return self.floors[mode]
+        return None
+    
+    def get_stair_config(self, stair_id: str) -> Optional[StairConfig]:
+        """获取指定楼梯的配置"""
+        if self.stairs and stair_id in self.stairs:
+            return self.stairs[stair_id]
+        return None
 
 
 class AppSettings(BaseModel):
@@ -103,6 +149,30 @@ def load_simulation_config(path: Path) -> SimulationSettings:
             payload.setdefault("fire_decay", fire_section.get("diffusion_decay"))
         if "decay" in fire_section:
             payload.setdefault("fire_decay", fire_section.get("decay"))
+    
+    # 解析多楼层配置
+    floors_section = raw.get("floors")
+    if isinstance(floors_section, dict):
+        floors_config = {}
+        for floor_id, floor_data in floors_section.items():
+            if isinstance(floor_data, dict):
+                floors_config[floor_id] = FloorConfig(**floor_data)
+        payload["floors"] = floors_config
+    
+    # 解析楼梯配置
+    stairs_section = raw.get("stairs")
+    if isinstance(stairs_section, dict):
+        stairs_config = {}
+        for stair_id, stair_data in stairs_section.items():
+            if isinstance(stair_data, dict):
+                # 转换 connections
+                connections = []
+                for conn in stair_data.get("connections", []):
+                    connections.append(StairConnection(**conn))
+                stair_data_copy = dict(stair_data)
+                stair_data_copy["connections"] = connections
+                stairs_config[stair_id] = StairConfig(**stair_data_copy)
+        payload["stairs"] = stairs_config
 
     # Fallback：若部分关键参数仍为空，则使用默认值填充
     defaults = {

@@ -71,27 +71,50 @@ export function animateFireMarkers(group: THREE.Group, time: number): void {
     if (child instanceof THREE.Mesh) {
       const { baseScale = 1.0 } = child.userData ?? {};
       const pulse = Math.sin(t * 1.4 + index * 0.5) * 0.2 + 1;
-      child.scale.setScalar(baseScale * pulse);
+      const flicker = Math.sin(t * 8.5 + index * 1.3) * 0.1 + 1;
+      child.scale.setScalar(baseScale * pulse * flicker);
       if (child.material instanceof THREE.MeshBasicMaterial) {
-        child.material.opacity = 0.25 + 0.2 * pulse;
+        child.material.opacity = 0.3 + 0.25 * pulse * flicker;
       }
       return;
     }
     const sprite = child as THREE.Sprite;
     const { baseScale = 1.2, intensity = 1.0, phase = 0 } = sprite.userData ?? {};
-    const pulse = Math.sin(t * 1.6 + phase + index * 0.15) * 0.35 + 0.85;
-    const wobble = Math.sin(t * 0.9 + phase) * 0.1;
-    const scale = baseScale * (0.75 + pulse * 0.55);
-    sprite.scale.set(scale, scale, scale);
-    const lerpFactor = (pulse + 1) * 0.5;
+    
+    // 多频率组合产生更自然的波动
+    const pulse1 = Math.sin(t * 1.6 + phase + index * 0.15) * 0.3;
+    const pulse2 = Math.sin(t * 2.8 + phase * 1.5) * 0.15;
+    const flicker = Math.sin(t * 9.2 + index * 2.1) * 0.12;
+    const combined = 0.85 + pulse1 + pulse2 + flicker;
+    
+    // 横向和纵向摆动
+    const wobbleX = Math.sin(t * 1.2 + phase) * 0.08;
+    const wobbleY = Math.sin(t * 0.9 + phase * 0.8) * 0.12;
+    const wobbleZ = Math.cos(t * 1.1 + phase * 1.2) * 0.06;
+    
+    const scale = baseScale * (0.7 + combined * 0.6);
+    sprite.scale.set(scale, scale * 1.1, scale);
+    
+    // 更丰富的颜色变化
+    const lerpFactor = (combined + 1) * 0.5;
     if (sprite.material instanceof THREE.SpriteMaterial) {
-      if (lerpFactor > 0.7) {
-        sprite.material.color = COLOR_COOL.clone().lerp(COLOR_HOT, lerpFactor).lerp(COLOR_CORE, 0.2 * lerpFactor);
+      if (lerpFactor > 0.75) {
+        // 高亮时：金黄 -> 橙红 -> 白芯
+        const tempColor = COLOR_COOL.clone().lerp(COLOR_HOT, lerpFactor * 0.9);
+        sprite.material.color = tempColor.lerp(COLOR_CORE, (lerpFactor - 0.75) * 0.8);
+      } else if (lerpFactor > 0.5) {
+        // 中等：金黄 -> 橙红
+        sprite.material.color = COLOR_COOL.clone().lerp(COLOR_HOT, (lerpFactor - 0.5) * 2);
       } else {
-        sprite.material.color = COLOR_COOL.clone().lerp(COLOR_HOT, lerpFactor * 0.8);
+        // 低亮：深橙 -> 金黄
+        sprite.material.color = new THREE.Color(0xff6020).lerp(COLOR_COOL, lerpFactor * 2);
       }
-      sprite.material.opacity = 0.5 + 0.5 * lerpFactor * intensity;
+      sprite.material.opacity = 0.6 + 0.4 * lerpFactor * intensity;
     }
-    sprite.position.y += wobble * 0.02;
+    
+    // 应用摆动
+    sprite.position.x += wobbleX * 0.03;
+    sprite.position.y += wobbleY * 0.025;
+    sprite.position.z += wobbleZ * 0.02;
   });
 }

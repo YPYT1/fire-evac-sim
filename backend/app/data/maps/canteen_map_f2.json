@@ -1,0 +1,10990 @@
+{
+  "width": 60,
+  "height": 60,
+  "cellSize": 1.0,
+  "origin": [
+    -30.0,
+    0.0,
+    -30.0
+  ],
+  "cells": [
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      }
+    ],
+    [
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      }
+    ],
+    [
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      }
+    ],
+    [
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": false
+      }
+    ]
+  ],
+  "exits": {
+    "north_door": {
+      "rect": [
+        28,
+        59,
+        4,
+        1
+      ]
+    },
+    "south_door": {
+      "rect": [
+        28,
+        0,
+        4,
+        1
+      ]
+    },
+    "east_door": {
+      "rect": [
+        59,
+        28,
+        1,
+        4
+      ]
+    },
+    "west_door": {
+      "rect": [
+        0,
+        28,
+        1,
+        4
+      ]
+    },
+    "west_stair_exit": {
+      "rect": [
+        6,
+        27,
+        2,
+        6
+      ]
+    },
+    "east_stair_exit": {
+      "rect": [
+        52,
+        27,
+        2,
+        6
+      ]
+    },
+    "south_stair_exit": {
+      "rect": [
+        26,
+        0,
+        8,
+        2
+      ]
+    }
+  }
+}
