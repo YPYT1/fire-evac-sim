@@ -2335,40 +2335,40 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -2517,7 +2517,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -2550,7 +2550,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -2699,7 +2699,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -2732,7 +2732,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -2881,7 +2881,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -2914,7 +2914,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -3063,7 +3063,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -3096,7 +3096,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -3245,7 +3245,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -3278,7 +3278,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -3427,7 +3427,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -3460,7 +3460,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -3609,7 +3609,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -3642,7 +3642,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -3791,7 +3791,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -3824,7 +3824,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -3973,7 +3973,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -4006,7 +4006,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -4155,7 +4155,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -4188,7 +4188,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -4337,7 +4337,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -4370,7 +4370,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -4519,7 +4519,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -4552,7 +4552,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -4701,7 +4701,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -4734,7 +4734,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -4883,7 +4883,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -4916,7 +4916,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -5065,50 +5065,6 @@
         "walkable": true
       },
       {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      }
-    ],
-    [
-      {
-        "walkable": true
-      },
-      {
         "walkable": false
       },
       {
@@ -5142,145 +5098,7 @@
         "walkable": true
       },
       {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -5462,7 +5280,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -5644,7 +5462,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -5826,7 +5644,189 @@
         "walkable": true
       },
       {
+        "walkable": false
+      },
+      {
         "walkable": true
+      }
+    ],
+    [
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
       },
       {
         "walkable": true
@@ -6008,7 +6008,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -6157,7 +6157,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -6190,7 +6190,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -6339,7 +6339,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -6372,7 +6372,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -6521,7 +6521,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -6554,7 +6554,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -6703,7 +6703,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -6736,7 +6736,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -6885,7 +6885,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -6918,7 +6918,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -7067,7 +7067,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -7100,7 +7100,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -7249,7 +7249,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -7282,7 +7282,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -7431,7 +7431,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -7464,7 +7464,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -7613,7 +7613,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -7646,7 +7646,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -7795,7 +7795,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -7828,7 +7828,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -7977,7 +7977,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -8010,7 +8010,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -8159,7 +8159,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -8192,7 +8192,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -8341,7 +8341,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -8374,7 +8374,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -8523,7 +8523,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -8556,7 +8556,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -8705,7 +8705,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -8738,7 +8738,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -8887,40 +8887,40 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -10976,6 +10976,14 @@
         0,
         8,
         2
+      ]
+    },
+    "west_stair_exit": {
+      "rect": [
+        6,
+        27,
+        2,
+        6
       ]
     }
   }
