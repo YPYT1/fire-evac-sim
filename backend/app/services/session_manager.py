@@ -13,7 +13,7 @@ from ..core.schemas import CrowdOverride, FireSource, SimReplanRequest, SimStart
 from ..sim.fire import build_cost_field, sample_random_fire_positions
 from ..sim.multilevel_evacuation import MultiLevelEvacuationSimulator
 from ..sim.state import SimulationState
-from ..sim.utils import world_to_grid
+from ..sim.utils import grid_to_world, scatter_cells, world_to_grid
 
 DEFAULT_MODE = "floor1"
 
@@ -35,49 +35,59 @@ def _random_floor_fires(
     rng: random.Random | None = None,
 ) -> list[FireSource]:
     """基于楼层配置生成随机火源"""
+    rng = rng or random.Random()
+    count_range = floor_config.fire_count_range
+    total_count = rng.randint(count_range[0], count_range[1]) if count_range else 0
+    if total_count <= 0:
+        return []
+
+    min_spacing = getattr(floor_config, "fire_min_spacing", 0)
+
     if not floor_config.fire_zones:
-        # 无指定区域，使用全局可行区域
-        count_range = floor_config.fire_count_range
-        count = rng.randint(count_range[0], count_range[1]) if rng else count_range[0]
         return sample_random_fire_positions(
             grid,
-            count,
+            total_count,
             floor_y=floor_config.height,
             intensity_range=(0.8, 1.3),
             rng=rng,
+            min_spacing=min_spacing,
         )
-    
-    # 基于 fire_zones 生成
-    fires: list[FireSource] = []
-    count_range = floor_config.fire_count_range
-    total_count = rng.randint(count_range[0], count_range[1]) if rng else count_range[0]
-    
-    for _ in range(total_count):
-        zone = rng.choice(floor_config.fire_zones) if rng else floor_config.fire_zones[0]
+
+    candidates: list[tuple[int, int]] = []
+    for zone in floor_config.fire_zones:
         rect = zone.get("rect")
         if not rect or len(rect) != 4:
             continue
-        
         x0, y0, w, h = rect
-        # 在区域内随机选择可行单元
-        candidates = []
         for dy in range(h):
             for dx in range(w):
                 gx, gy = x0 + dx, y0 + dy
                 if 0 <= gx < grid.width and 0 <= gy < grid.height:
                     if grid.cells[gy][gx].walkable:
                         candidates.append((gx, gy))
-        
-        if candidates:
-            cell = rng.choice(candidates) if rng else candidates[0]
-            wx = grid.origin[0] + (cell[0] + 0.5) * grid.cell_size
-            wz = grid.origin[2] + (cell[1] + 0.5) * grid.cell_size
-            intensity = rng.uniform(0.8, 1.3) if rng else 1.0
-            fires.append(FireSource(
+
+    if not candidates:
+        return sample_random_fire_positions(
+            grid,
+            total_count,
+            floor_y=floor_config.height,
+            intensity_range=(0.8, 1.3),
+            rng=rng,
+            min_spacing=min_spacing,
+        )
+
+    selected = scatter_cells(candidates, total_count, min_spacing, rng)
+    fires: list[FireSource] = []
+    for gx, gy in selected:
+        wx, _, wz = grid_to_world(gx, gy, grid.cell_size, grid.origin)
+        intensity = rng.uniform(0.8, 1.3)
+        fires.append(
+            FireSource(
                 position=(wx, floor_config.height, wz),
                 intensity=intensity,
-            ))
-    
+            )
+        )
+
     return fires
 
 

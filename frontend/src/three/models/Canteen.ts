@@ -1,7 +1,45 @@
 import * as THREE from 'three';
-import { Room } from './Room';
+import { Room, type DoorConfig } from './Room';
 import { Staircase } from './Staircase';
 import { Wall } from './Wall';
+import layoutConfig from '../layoutConfig.json';
+
+interface SeatingConfig {
+  spacingX: number;
+  spacingZ: number;
+  marginX: number;
+  marginZ: number;
+  centralClearance?: number;
+  excludedZones?: Array<{ x: number; z: number; halfWidth: number; halfDepth: number }>;
+}
+
+interface SideRoomConfig {
+  side: 'east' | 'west';
+  width: number;
+  depth: number;
+  offsetZ?: number;
+  offsetX?: number;
+  doorWidth?: number;
+  doorHeight?: number;
+  doorOffset?: number;
+}
+
+interface FloorLayout {
+  level: number;
+  includeOuterWalls: boolean;
+  cornerRooms: boolean;
+  seating?: SeatingConfig;
+  sideRoom?: SideRoomConfig;
+}
+
+interface LayoutFile {
+  stairs?: {
+    westEnabled?: boolean;
+    eastEnabled?: boolean;
+    southEnabled?: boolean;
+  };
+  floors: FloorLayout[];
+}
 
 /**
  * 三层食堂模型，尺寸 60m × 60m，每层 4m 高。
@@ -13,7 +51,6 @@ export class Canteen {
   private readonly totalDepth = 60;
   private readonly wallHeight = 4;
   private readonly wallThickness = 0.2;
-  private readonly floors = 3;
 
   private readonly roomWidth = 18;
   private readonly roomDepth = 18;
@@ -23,27 +60,50 @@ export class Canteen {
   private readonly doorHeight = 3.5;
   private readonly wallColor = 0xe8d5b7;
 
+  private readonly floorLayouts: FloorLayout[];
+  private readonly stairVisibility: Required<NonNullable<LayoutFile['stairs']>>;
+
   constructor() {
     this.group = new THREE.Group();
+    const meta = (layoutConfig as LayoutFile) ?? { floors: [] };
+    this.stairVisibility = {
+      westEnabled: meta.stairs?.westEnabled !== false,
+      eastEnabled: meta.stairs?.eastEnabled !== false,
+      southEnabled: meta.stairs?.southEnabled !== false,
+    };
+    this.floorLayouts = this.loadFloorLayouts(meta.floors ?? []);
     this.build();
   }
 
   private build(): void {
-    for (let floor = 0; floor < this.floors; floor++) {
-      const floorY = floor * this.wallHeight;
-      const groundFloor = floor === 0;
-
-      if (groundFloor) {
+    for (const layout of this.floorLayouts) {
+      const floorY = layout.level * this.wallHeight;
+      if (layout.includeOuterWalls) {
         this.createOuterWalls(floorY, true);
       }
 
       this.createCorridors(floorY);
-      this.createCornerRooms(floorY);
-      this.createSeating(floorY);
+      if (layout.cornerRooms) {
+        this.createCornerRooms(floorY);
+      }
+      if (layout.sideRoom) {
+        this.createSideRoom(floorY, layout.sideRoom);
+      }
+      this.createSeating(floorY, layout.seating);
       this.createFloor(floorY);
     }
 
     this.createStaircases();
+  }
+
+  private loadFloorLayouts(rawFloors: FloorLayout[]): FloorLayout[] {
+    return rawFloors.map((floor) => ({
+      level: floor.level,
+      includeOuterWalls: floor.includeOuterWalls ?? false,
+      cornerRooms: floor.cornerRooms ?? false,
+      seating: floor.seating,
+      sideRoom: floor.sideRoom,
+    }));
   }
 
   private createOuterWalls(floorY: number, hasDoors: boolean): void {
@@ -237,9 +297,72 @@ export class Canteen {
     this.group.add(southeast.getGroup());
   }
 
-  private createSeating(floorY: number): void {
-    const offsets = [-8, 0, 8];
-    const stairZones = this.getStairLayout()
+  private createSideRoom(floorY: number, config: SideRoomConfig): void {
+    const door: DoorConfig = {
+      wall: config.side === 'east' ? 'left' : 'right',
+      width: config.doorWidth ?? this.doorWidth,
+      height: config.doorHeight ?? this.doorHeight,
+      offset: config.doorOffset ?? 0,
+    };
+    const room = new Room(
+      config.width,
+      config.depth,
+      this.wallHeight,
+      this.wallThickness,
+      this.wallColor,
+      [door]
+    );
+    const offsetX = config.offsetX ?? 0;
+    const offsetZ = config.offsetZ ?? 0;
+    const x =
+      config.side === 'east'
+        ? this.totalWidth / 2 - config.width / 2 - this.wallThickness + offsetX
+        : -this.totalWidth / 2 + config.width / 2 + this.wallThickness + offsetX;
+    room.setPosition(x, floorY, offsetZ);
+    this.group.add(room.getGroup());
+  }
+
+  private createSeating(floorY: number, config?: SeatingConfig): void {
+    if (!config) return;
+    const stairZones = this.getStairClearanceZones(floorY);
+    const startX = -this.totalWidth / 2 + config.marginX;
+    const endX = this.totalWidth / 2 - config.marginX;
+    const startZ = -this.totalDepth / 2 + config.marginZ;
+    const endZ = this.totalDepth / 2 - config.marginZ;
+
+    for (let x = startX; x <= endX; x += config.spacingX) {
+      for (let z = startZ; z <= endZ; z += config.spacingZ) {
+        if (
+          config.centralClearance &&
+          (Math.abs(x) < config.centralClearance || Math.abs(z) < config.centralClearance)
+        ) {
+          continue;
+        }
+        if (
+          config.excludedZones?.some(
+            (zone) =>
+              Math.abs(x - zone.x) < zone.halfWidth && Math.abs(z - zone.z) < zone.halfDepth
+          )
+        ) {
+          continue;
+        }
+        const nearStair = stairZones.some(
+          (stair) =>
+            Math.abs(x - stair.x) < stair.clearanceX && Math.abs(z - stair.z) < stair.clearanceZ
+        );
+        if (nearStair) continue;
+
+        const set = this.createDiningSet();
+        set.position.set(x, floorY, z);
+        this.group.add(set);
+      }
+    }
+  }
+
+  private getStairClearanceZones(
+    floorY: number
+  ): Array<{ x: number; z: number; clearanceX: number; clearanceZ: number }> {
+    return this.getStairLayout()
       .filter((layout) => layout.occupiedLevels.includes(floorY))
       .map(({ x, z, clearanceX, clearanceZ }) => ({
         x,
@@ -247,22 +370,6 @@ export class Canteen {
         clearanceX: clearanceX ?? 6,
         clearanceZ: clearanceZ ?? 6,
       }));
-
-    offsets.forEach((x) => {
-      offsets.forEach((z) => {
-        if (Math.abs(x) < 1 && Math.abs(z) < 1) return;
-
-        const nearStair = stairZones.some(
-          (stair) =>
-            Math.abs(x - stair.x) < stair.clearanceX && Math.abs(z - stair.z) < stair.clearanceZ
-        );
-        if (nearStair) return;
-
-        const set = this.createDiningSet();
-        set.position.set(x, floorY, z);
-        this.group.add(set);
-      });
-    });
   }
 
   private createDiningSet(): THREE.Group {
@@ -409,6 +516,7 @@ export class Canteen {
     holeZ?: number;
     holeWidth?: number;
     holeDepth?: number;
+    side?: 'west' | 'east' | 'south';
   }> {
     type StairConfig = {
       x: number;
@@ -443,6 +551,7 @@ export class Canteen {
         occupiedLevels: sharedOccupiedLevels,
         clearanceX: 6,
         clearanceZ: 6,
+        side: 'west',
       },
       {
         x: offsetX,
@@ -453,6 +562,7 @@ export class Canteen {
         occupiedLevels: sharedOccupiedLevels,
         clearanceX: 6,
         clearanceZ: 6,
+        side: 'east',
       },
     ];
 
@@ -476,9 +586,21 @@ export class Canteen {
       steps: externalSteps,
       clearanceX: 6,
       clearanceZ: 8,
+      side: 'south',
     });
 
-    return layouts;
+    return layouts.filter((layout) => {
+      if (layout.side === 'west' && !this.stairVisibility.westEnabled) {
+        return false;
+      }
+      if (layout.side === 'east' && !this.stairVisibility.eastEnabled) {
+        return false;
+      }
+      if (layout.side === 'south' && !this.stairVisibility.southEnabled) {
+        return false;
+      }
+      return true;
+    });
   }
 
   getGroup(): THREE.Group {

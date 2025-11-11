@@ -26,6 +26,12 @@
 
 > 提示：若只需要调整人员数量或火焰参数，可直接编辑 `simulation.yaml` 并重启后端，无需重启前端。
 
+### 2.6 楼层布局与疏散配置同步
+
+- **三维布局数据** 已抽离到 `frontend/src/three/layoutConfig.json`。其中每层的 `sideRoom`、`seating`、`excludedZones`、`stairs` 可独立维护，前端渲染时会自动应用。
+- **仿真约束**（出生区域/火焰散布）通过 `backend/app/data/config/simulation.yaml` 的 `spawn_scatter_radius`、`fire_min_spacing`、`fire_zones` 字段定义。请保持与 `layoutConfig.json` 的坐标矩形一致，以避免出现“可视化和路径配置不匹配”的情况。
+- 修改上述两个文件后，建议运行 `uv run pytest backend/tests/test_simulation_flow.py` 以及一次手动仿真，确认人员在开放区域均匀散布、火点随机生成并与新楼层布局吻合。
+
 ---
 
 ## 3. 手动添加火点（Manual 模式）

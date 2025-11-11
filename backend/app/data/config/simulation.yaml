@@ -26,16 +26,22 @@ floors:
         rect: [0, 28, 1, 4]
     stairs: []
     spawn_regions:
-      - id: central_hall
-        rect: [24, 24, 12, 12]
-      - id: west_corridor
-        rect: [8, 24, 8, 12]
-      - id: east_corridor
-        rect: [44, 24, 8, 12]
+      - id: f1_main_hall
+        rect: [10, 10, 40, 40]
+      - id: f1_west_tables
+        rect: [12, 12, 10, 36]
+      - id: f1_east_tables
+        rect: [38, 12, 10, 36]
     fire_zones:
-      - id: main_area
-        rect: [15, 15, 30, 30]
-    agent_ratio: 0.4
+      - id: f1_core_tables
+        rect: [14, 14, 32, 32]
+      - id: f1_south_tables
+        rect: [16, 8, 28, 10]
+      - id: f1_north_tables
+        rect: [16, 42, 28, 10]
+    agent_ratio: 0.45
+    spawn_scatter_radius: 4
+    fire_min_spacing: 6
     fire_count_range: [1, 3]
     
   floor2:
@@ -43,27 +49,28 @@ floors:
     height: 4.0
     grid_file: canteen_map_f2.json
     exits:
-      - id: west_stair_exit
-        rect: [6, 27, 2, 6]
       - id: east_stair_exit
         rect: [52, 27, 2, 6]
       - id: south_stair_exit
         rect: [26, 0, 8, 2]
     stairs:
-      - west_stair
       - east_stair
       - south_stair
     spawn_regions:
-      - id: floor2_central
-        rect: [20, 20, 20, 20]
-      - id: floor2_west
-        rect: [8, 20, 10, 20]
-      - id: floor2_east
-        rect: [42, 20, 10, 20]
+      - id: f2_main_hall
+        rect: [12, 12, 36, 36]
+      - id: f2_west_tables
+        rect: [12, 14, 10, 32]
+      - id: f2_east_tables
+        rect: [38, 14, 10, 32]
     fire_zones:
-      - id: floor2_main
-        rect: [15, 15, 30, 30]
-    agent_ratio: 0.35
+      - id: f2_core_tables
+        rect: [16, 16, 28, 28]
+      - id: f2_balcony
+        rect: [18, 40, 24, 10]
+    agent_ratio: 0.38
+    spawn_scatter_radius: 4
+    fire_min_spacing: 6
     fire_count_range: [2, 3]
     
   floor3:
@@ -72,40 +79,24 @@ floors:
     grid_file: canteen_map_f3.json
     exits: []
     stairs:
-      - west_stair
       - east_stair
     spawn_regions:
-      - id: floor3_central
-        rect: [22, 22, 16, 16]
-      - id: floor3_west
-        rect: [10, 22, 10, 16]
-      - id: floor3_east
-        rect: [40, 22, 10, 16]
+      - id: f3_open_core
+        rect: [14, 20, 28, 20]
+      - id: f3_side_room
+        rect: [3, 18, 8, 24]
     fire_zones:
-      - id: floor3_main
-        rect: [18, 18, 24, 24]
-    agent_ratio: 0.25
-    fire_count_range: [2, 4]
+      - id: f3_open_zone
+        rect: [18, 22, 24, 18]
+      - id: f3_room_zone
+        rect: [3, 20, 8, 20]
+    agent_ratio: 0.2
+    spawn_scatter_radius: 5
+    fire_min_spacing: 5
+    fire_count_range: [1, 2]
 
 # 楼梯连接配置
 stairs:
-  west_stair:
-    name: "西侧楼梯"
-    width: 5
-    depth: 6
-    position:
-      x: -23.0
-      z: 0.0
-    connections:
-      - from_floor: floor3
-        to_floor: floor2
-        entry_cells: [[6, 27], [6, 28], [6, 29], [6, 30], [6, 31], [6, 32], [7, 27], [7, 28], [7, 29], [7, 30], [7, 31], [7, 32]]
-        exit_cells: [[6, 27], [6, 28], [6, 29], [6, 30], [6, 31], [6, 32], [7, 27], [7, 28], [7, 29], [7, 30], [7, 31], [7, 32]]
-      - from_floor: floor2
-        to_floor: floor1
-        entry_cells: [[6, 27], [6, 28], [6, 29], [6, 30], [6, 31], [6, 32], [7, 27], [7, 28], [7, 29], [7, 30], [7, 31], [7, 32]]
-        exit_cells: [[6, 27], [6, 28], [6, 29], [6, 30], [6, 31], [6, 32], [7, 27], [7, 28], [7, 29], [7, 30], [7, 31], [7, 32]]
-        
   east_stair:
     name: "东侧楼梯"
     width: 5
@@ -150,8 +141,6 @@ map:
       rect: [59, 28, 1, 4]
     - id: west_door
       rect: [0, 28, 1, 4]
-    - id: west_stair_exit
-      rect: [6, 27, 2, 6]
     - id: east_stair_exit
       rect: [52, 27, 2, 6]
     - id: south_stair_exit
@@ -163,12 +152,12 @@ agents:
     mean: 1.35
     std: 0.25
   start_region:
-    - id: central_hall
-      rect: [24, 24, 12, 12]
-    - id: west_corridor
-      rect: [8, 24, 8, 12]
-    - id: east_corridor
-      rect: [44, 24, 8, 12]
+    - id: f1_main_hall
+      rect: [10, 10, 40, 40]
+    - id: f1_west_tables
+      rect: [12, 12, 10, 36]
+    - id: f1_east_tables
+      rect: [38, 12, 10, 36]
 
 fire:
   mode: fixed
@@ -199,11 +188,10 @@ websocket:
   broadcast_hz: 10
   throttle_agents: 500
 
-goals:
-  - north_door
-  - south_door
-  - east_door
-  - west_door
-  - west_stair_exit
-  - east_stair_exit
-  - south_stair_exit
+  goals:
+    - north_door
+    - south_door
+    - east_door
+    - west_door
+    - east_stair_exit
+    - south_stair_exit

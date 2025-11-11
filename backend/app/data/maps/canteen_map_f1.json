@@ -88,2942 +88,12 @@
         "walkable": false
       },
       {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      }
-    ],
-    [
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      }
-    ],
-    [
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      }
-    ],
-    [
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      }
-    ],
-    [
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      }
-    ],
-    [
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      }
-    ],
-    [
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      }
-    ],
-    [
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      }
-    ],
-    [
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      }
-    ],
-    [
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      }
-    ],
-    [
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      }
-    ],
-    [
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      }
-    ],
-    [
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      }
-    ],
-    [
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      }
-    ],
-    [
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      }
-    ],
-    [
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      }
-    ],
-    [
-      {
         "walkable": false
       },
       {
         "walkable": false
       },
       {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
         "walkable": true
       },
       {
@@ -3034,89 +104,6 @@
       },
       {
         "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      }
-    ],
-    [
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
       },
       {
         "walkable": false
@@ -3147,87 +134,6 @@
       },
       {
         "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
       },
       {
         "walkable": false
@@ -5106,7 +2012,7 @@
     ],
     [
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -5283,12 +2189,12 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       }
     ],
     [
       {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -5465,180 +2371,12 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       }
     ],
     [
       {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
+        "walkable": false
       },
       {
         "walkable": true
@@ -5648,20 +2386,6 @@
       },
       {
         "walkable": true
-      }
-    ],
-    [
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
-      },
-      {
-        "walkable": true
       },
       {
         "walkable": true
@@ -5829,7 +2553,7 @@
         "walkable": true
       },
       {
-        "walkable": true
+        "walkable": false
       }
     ],
     [
@@ -7657,55 +4381,76 @@
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
       },
       {
         "walkable": true
@@ -7780,55 +4525,34 @@
         "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
+        "walkable": true
       },
       {
         "walkable": false
@@ -7839,55 +4563,76 @@
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
       },
       {
         "walkable": true
@@ -7962,55 +4707,34 @@
         "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
+        "walkable": true
       },
       {
         "walkable": false
@@ -8021,55 +4745,76 @@
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
       },
       {
         "walkable": true
@@ -8144,55 +4889,34 @@
         "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
+        "walkable": true
       },
       {
         "walkable": false
@@ -8203,53 +4927,912 @@
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
       },
       {
         "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      }
+    ],
+    [
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      }
+    ],
+    [
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      }
+    ],
+    [
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      }
+    ],
+    [
       {
         "walkable": false
       },
@@ -8326,55 +5909,106 @@
         "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
       },
       {
         "walkable": false
@@ -8385,55 +6019,76 @@
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
       },
       {
         "walkable": true
@@ -8508,55 +6163,34 @@
         "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
+        "walkable": true
       },
       {
         "walkable": false
@@ -8567,55 +6201,76 @@
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
       },
       {
         "walkable": true
@@ -8690,55 +6345,34 @@
         "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
+        "walkable": true
       },
       {
         "walkable": false
@@ -8749,55 +6383,76 @@
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
       },
       {
         "walkable": true
@@ -8872,55 +6527,34 @@
         "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
+        "walkable": true
       },
       {
         "walkable": false
@@ -8931,55 +6565,76 @@
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
       },
       {
         "walkable": true
@@ -9054,55 +6709,34 @@
         "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
+        "walkable": true
       },
       {
         "walkable": false
@@ -9113,55 +6747,76 @@
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
       },
       {
         "walkable": true
@@ -9236,55 +6891,34 @@
         "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
+        "walkable": true
       },
       {
         "walkable": false
@@ -9295,55 +6929,76 @@
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
       },
       {
         "walkable": true
@@ -9418,55 +7073,34 @@
         "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
+        "walkable": true
       },
       {
         "walkable": false
@@ -9477,55 +7111,76 @@
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
       },
       {
         "walkable": true
@@ -9600,55 +7255,34 @@
         "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
+        "walkable": true
       },
       {
         "walkable": false
@@ -9659,55 +7293,76 @@
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
       },
       {
         "walkable": true
@@ -9782,55 +7437,34 @@
         "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
+        "walkable": true
       },
       {
         "walkable": false
@@ -9841,55 +7475,76 @@
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
       },
       {
         "walkable": true
@@ -9964,55 +7619,34 @@
         "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
+        "walkable": true
       },
       {
         "walkable": false
@@ -10023,55 +7657,76 @@
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
       },
       {
         "walkable": true
@@ -10146,55 +7801,34 @@
         "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
+        "walkable": true
       },
       {
         "walkable": false
@@ -10205,55 +7839,76 @@
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
       },
       {
         "walkable": true
@@ -10328,55 +7983,34 @@
         "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
+        "walkable": true
       },
       {
         "walkable": false
@@ -10387,55 +8021,76 @@
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
       },
       {
         "walkable": true
@@ -10510,55 +8165,34 @@
         "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
       {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
+        "walkable": true
       },
       {
         "walkable": false
@@ -10569,53 +8203,184 @@
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
       },
       {
         "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
-      {
-        "walkable": false
-      },
+      }
+    ],
+    [
       {
         "walkable": false
       },
@@ -10692,55 +8457,2290 @@
         "walkable": true
       },
       {
-        "walkable": false
+        "walkable": true
       },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
       {
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
       {
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
       {
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
       {
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
       {
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
       {
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
       {
         "walkable": false
       },
       {
-        "walkable": false
+        "walkable": true
       },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
       {
         "walkable": false
       },
       {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
         "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": false
+      }
+    ],
+    [
+      {
+        "walkable": false
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
+      },
+      {
+        "walkable": true
       },
       {
         "walkable": false
@@ -10960,14 +10960,6 @@
         28,
         1,
         4
-      ]
-    },
-    "west_stair_exit": {
-      "rect": [
-        6,
-        27,
-        2,
-        6
       ]
     },
     "east_stair_exit": {

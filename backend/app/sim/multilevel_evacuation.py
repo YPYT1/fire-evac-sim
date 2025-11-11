@@ -12,7 +12,7 @@ from ..core.config import FloorConfig, SimulationSettings
 from ..core.schemas import AgentSpawnConfig, AgentState, FireSource
 from .grid import Grid, load_grid
 from .multilevel import MultiLevelPathPlanner, PathSegment
-from .utils import grid_to_world, world_to_grid
+from .utils import grid_to_world, world_to_grid, scatter_cells
 
 GridCoord = Tuple[int, int]
 WorldCoord = Tuple[float, float, float]
@@ -117,6 +117,7 @@ class MultiLevelEvacuationSimulator:
         self.exit_fire_block_radius = 3.5
         self.fire_avoid_distance = 4.0
         self.exit_fire_penalty_weight = 6.0
+        self.fire_block_cost_threshold = 0.85
         self.path_jitter_strength = 0.6
         self.route_noise = 4.0
         self.repulsion_radius = 1.3
@@ -261,6 +262,7 @@ class MultiLevelEvacuationSimulator:
                 floor_config.spawn_regions,
                 count,
                 blocked=blocked_by_floor.get(floor_id),
+                scatter_radius=getattr(floor_config, "spawn_scatter_radius", 0),
             )
 
             for cell in spawn_cells:
@@ -348,6 +350,7 @@ class MultiLevelEvacuationSimulator:
         count: int,
         *,
         blocked: Optional[Set[GridCoord]] = None,
+        scatter_radius: int = 0,
     ) -> List[GridCoord]:
         blocked = blocked or set()
         candidates: List[GridCoord] = []
@@ -373,9 +376,8 @@ class MultiLevelEvacuationSimulator:
         if not candidates:
             return []
 
-        if len(candidates) >= count:
-            return random.sample(candidates, count)
-        return [random.choice(candidates) for _ in range(count)]
+        rng = self.route_rng
+        return scatter_cells(candidates, count, scatter_radius, rng)
 
     def _plan_route(
         self,
@@ -531,6 +533,24 @@ class MultiLevelEvacuationSimulator:
         return list(grid.exits.get(exit_id, []))
 
     def _exit_fire_penalty(self, floor_id: str, exit_id: str) -> Tuple[float, bool]:
+        if self.cost_fields.get(floor_id):
+            grid = self.floor_grids.get(floor_id)
+            if grid is None:
+                return 0.0, False
+            cells = self._get_exit_cells_for_id(floor_id, exit_id)
+            if not cells:
+                return 0.0, False
+            samples = []
+            for cx, cy in cells:
+                wx, _, wz = grid_to_world(cx, cy, grid.cell_size, grid.origin)
+                samples.append(self._lookup_fire_cost(floor_id, (wx, grid.origin[1], wz)))
+            if not samples:
+                return 0.0, False
+            avg_cost = sum(samples) / len(samples)
+            if avg_cost >= self.fire_block_cost_threshold:
+                return self.exit_fire_penalty_weight * 10.0, True
+            return self.exit_fire_penalty_weight * avg_cost, False
+
         fires = self.fires_by_floor.get(floor_id) or []
         if not fires:
             return 0.0, False
@@ -546,6 +566,21 @@ class MultiLevelEvacuationSimulator:
         return self.exit_fire_penalty_weight / max(min_distance, 0.5), False
 
     def _path_fire_penalty(self, path: List[WorldCoord], floor_tags: List[str]) -> float:
+        if self.cost_fields:
+            penalty = 0.0
+            samples = 0
+            for point, tag in zip(path, floor_tags):
+                if tag == "stair":
+                    continue
+                cost = self._lookup_fire_cost(tag, point)
+                if cost <= 0:
+                    continue
+                penalty += cost
+                samples += 1
+            if samples == 0:
+                return 0.0
+            return penalty / samples
+
         penalty = 0.0
         for point, tag in zip(path, floor_tags):
             if tag == "stair":
@@ -560,6 +595,14 @@ class MultiLevelEvacuationSimulator:
             if min_distance < self.fire_avoid_distance:
                 penalty += (self.fire_avoid_distance - min_distance)
         return penalty
+
+    def _lookup_fire_cost(self, floor_id: str, point: WorldCoord) -> float:
+        field = self.cost_fields.get(floor_id)
+        grid = self.floor_grids.get(floor_id)
+        if not field or not grid:
+            return 0.0
+        cell = self._world_to_cell(grid, point)
+        return max(0.0, float(field.get(cell, 0.0)))
 
     def _exit_centroid(self, floor_id: str, exit_id: str) -> Optional[WorldCoord]:
         grid = self.floor_grids.get(floor_id)

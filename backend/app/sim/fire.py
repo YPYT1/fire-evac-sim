@@ -9,6 +9,7 @@ import numpy as np
 
 from ..core.schemas import FireSource
 from .grid import Grid
+from .utils import grid_to_world, scatter_cells
 
 
 def build_cost_field(grid: Grid, fires: Iterable[FireSource], decay: float = 0.95) -> np.ndarray:
@@ -34,8 +35,9 @@ def sample_random_fire_positions(
     floor_y: float = 0.0,
     intensity_range: Sequence[float] = (0.8, 1.2),
     rng: random.Random | None = None,
+    min_spacing: int = 0,
 ) -> List[FireSource]:
-    """从全局可行走区域随机生成指定数量的火源。"""
+    """从全局可行走区域随机生成指定数量的火源，并尽量分散覆盖空地。"""
 
     rng = rng or random.Random()
     walkable: List[tuple[int, int]] = []
@@ -52,17 +54,15 @@ def sample_random_fire_positions(
     if max_intensity < min_intensity:
         min_intensity, max_intensity = max_intensity, min_intensity
 
-    unique_count = min(count, len(walkable))
-    selected = rng.sample(walkable, unique_count)
-    while len(selected) < count:
-        selected.append(rng.choice(walkable))
+    selected = scatter_cells(walkable, count, min_spacing, rng)
 
     fires: List[FireSource] = []
     for x, y in selected:
         intensity = rng.uniform(min_intensity, max_intensity)
+        wx, _, wz = grid_to_world(x, y, grid.cell_size, grid.origin)
         fires.append(
             FireSource(
-                position=(x * grid.cell_size, floor_y, y * grid.cell_size),
+                position=(wx, floor_y, wz),
                 intensity=float(intensity),
             )
         )

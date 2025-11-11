@@ -40,6 +40,8 @@ class FloorConfig(BaseModel):
     fire_zones: List[Dict[str, Any]] = Field(default_factory=list)
     agent_ratio: float = Field(default=0.33)
     fire_count_range: List[int] = Field(default=[1, 3])
+    spawn_scatter_radius: int = Field(default=0, ge=0)
+    fire_min_spacing: int = Field(default=0, ge=0)
 
 
 class CrowdBehaviorConfig(BaseModel):
