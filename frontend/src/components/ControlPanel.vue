@@ -53,7 +53,10 @@
           <input type="range" min="0" max="1.2" step="0.05" v-model.number="crowdPush" />
         </div>
       </div>
-      <button type="submit" :disabled="isRunning || starting">启动仿真</button>
+      <button type="submit" :disabled="starting || isRunning" :class="{ 'btn-loading': starting }">
+        <span v-if="starting" class="loading-spinner"></span>
+        {{ starting ? '启动中...' : '启动仿真' }}
+      </button>
     </form>
     <p class="hint">选择不同楼层可预览对应高度的疏散路径与火点分布。</p>
     <button type="button" class="stop" @click="onStop" :disabled="!isRunning">停止仿真</button>
@@ -100,10 +103,27 @@ const sessionLabel = computed(() => store.sessionId ?? '尚未启动');
 async function onStart() {
   if (starting.value) return;
   starting.value = true;
+  
+  // 显示加载状态
+  showToastNotification('正在启动仿真，请稍候...', 'info');
+  
   try {
+    // 清除旧数据（重要！）
+    store.reset();
+    
     if (store.sessionId) {
+      showToastNotification('正在停止当前仿真...', 'info');
       await onStop();
     }
+    
+    // 根据楼层显示不同提示
+    const floorTips: Record<string, string> = {
+      floor1: '正在初始化一楼场景...',
+      floor2: '正在加载二楼场景，请耐心等待...',
+      floor3: '正在加载三楼场景，计算中...',
+    };
+    showToastNotification(floorTips[mode.value] || '正在加载...', 'info');
+    
     const response = await startSimulation({
       mode: mode.value,
       agents: {
@@ -118,6 +138,8 @@ async function onStart() {
         repulsion_push_strength: crowdPush.value,
       },
     });
+    
+    showToastNotification('正在连接 WebSocket...', 'info');
     store.tickHz = response.tick_hz;
     store.setMode(mode.value);
     connectSocket(response.session_id);
@@ -137,6 +159,7 @@ async function onStop() {
   socket = null;
   store.reset();
   starting.value = false;
+  showToastNotification('仿真已停止', 'info');
 }
 
 function connectSocket(sessionId: string) {
@@ -244,6 +267,11 @@ button {
   color: #ffffff;
 }
 
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .stop {
   background: #ef4444;
   border-color: #dc2626;
@@ -258,5 +286,25 @@ button {
   font-size: 0.85rem;
   color: #2563eb;
   margin: -0.25rem 0 0.25rem;
+}
+
+.btn-loading {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.loading-spinner {
+  position: absolute;
+  left: 1rem;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
 </style>

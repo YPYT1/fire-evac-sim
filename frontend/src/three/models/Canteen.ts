@@ -499,7 +499,10 @@ export class Canteen {
           );
           staircase.setPosition(x, baseY, z);
           staircase.setRotation(0, rotation, 0);
-          this.group.add(staircase.getGroup());
+          const staircaseGroup = staircase.getGroup();
+          // 标记楼梯所在楼层（根据baseY判断）
+          staircaseGroup.userData.floorLevel = baseY;
+          this.group.add(staircaseGroup);
         });
       }
     );

@@ -107,11 +107,18 @@ onMounted(async () => {
     { immediate: true }
   );
 
+  // 只在仿真启动后才应用楼层视角
   watch(
-    () => store.mode,
-    (mode) => {
-      updateFloorVisibility(mode);
-      adjustCameraForFloor(mode);
+    () => [store.mode, store.sessionId] as const,
+    ([mode, sessionId]) => {
+      if (sessionId) {
+        // 只有仿真运行中才应用视角切换
+        updateFloorVisibility(mode);
+        adjustCameraForFloor(mode);
+      } else {
+        // 停止后恢复所有层可见
+        resetVisibility();
+      }
     },
     { immediate: false }
   );
@@ -122,45 +129,153 @@ onMounted(async () => {
 function updateFloorVisibility(mode: 'floor1' | 'floor2' | 'floor3') {
   if (!buildingModel || !bundle) return;
 
-  // 根据模式设置楼层可见性
   buildingModel.traverse((child) => {
-    if (child instanceof THREE.Mesh || child instanceof THREE.Group) {
-      const position = child.position;
-      const y = position.y;
-
-      // 根据 Y 坐标判断楿层
-      if (mode === 'floor1') {
-        // 一层模式：隐藏二三层
-        child.visible = y < 4.5;
-      } else if (mode === 'floor2') {
-        // 二层模式：隐藏三层，淡化一层
-        if (y >= 8) {
+    const y = child.position.y;
+    const meshName = child.name.toLowerCase();
+    const parentName = child.parent?.name.toLowerCase() || '';
+    
+    // 判断是否是楼梯
+    const isStaircase = meshName === 'staircase' || parentName === 'staircase';
+    const stairFloorLevel = child.userData.floorLevel || child.parent?.userData.floorLevel || 0;
+    
+    // 判断是否是地板/楼顶
+    const isFloor = meshName.includes('floor') || meshName.includes('ceiling');
+    
+    // 判断是否是三楼房间（Y >= 8）
+    const isFloor3Room = y >= 8;
+    
+    // 保存原始材质
+    if (child instanceof THREE.Mesh && !child.userData.originalMaterial && child.material) {
+      child.userData.originalMaterial = child.material;
+    }
+    
+    if (mode === 'floor1') {
+      // 一楼模式：一楼墙体透明25%，二三楼全部隐藏（包括地板、桂椅、房间、楼梯）
+      if (y >= 4) {
+        // 二三楼全部隐藏
+        child.visible = false;
+      } else {
+        // 一楼：墙体透明
+        child.visible = true;
+        if (child instanceof THREE.Mesh && child.userData.originalMaterial && y > 0.1 && !isFloor) {
+          child.material = (child.userData.originalMaterial as THREE.Material).clone();
+          child.material.opacity = 0.25;
+          child.material.transparent = true;
+          child.material.depthWrite = false;
+        } else if (child instanceof THREE.Mesh && child.userData.originalMaterial) {
+          child.material = child.userData.originalMaterial;
+        }
+      }
+    } else if (mode === 'floor2') {
+      // 二楼模式：一楼墙体高度透明，二楼完全显示，三楼全部隐藏
+      
+      // 三楼：全部隐藏
+      if (y >= 8) {
+        child.visible = false;
+      }
+      // 楼梯特殊处理
+      else if (isStaircase) {
+        if (stairFloorLevel >= 4) {
+          // 三楼通往二楼的楼梯：隐藏
           child.visible = false;
         } else {
+          // 二楼通往一楼的楼梯：显示
           child.visible = true;
-          if (child instanceof THREE.Mesh && child.material) {
-            const mat = child.material as THREE.Material;
-            if (y < 1) {
-              mat.opacity = 0.3;
-              mat.transparent = true;
-            } else {
-              mat.opacity = 1;
-            }
-          }
-        }
-      } else {
-        // 三层模式：淡化一二层
-        child.visible = true;
-        if (child instanceof THREE.Mesh && child.material) {
-          const mat = child.material as THREE.Material;
-          if (y < 6) {
-            mat.opacity = 0.25;
-            mat.transparent = true;
-          } else {
-            mat.opacity = 1;
+          if (child instanceof THREE.Mesh && child.userData.originalMaterial) {
+            child.material = child.userData.originalMaterial;
           }
         }
       }
+      // 二楼：完全显示
+      else if (y >= 4 && y < 8) {
+        child.visible = true;
+        if (child instanceof THREE.Mesh && child.userData.originalMaterial) {
+          child.material = child.userData.originalMaterial;
+        }
+      }
+      // 一楼：墙体高度透明
+      else if (y < 4) {
+        child.visible = true;
+        if (child instanceof THREE.Mesh && child.userData.originalMaterial) {
+          if (!isFloor && y > 0.1) {
+            // 墙体：高度透明
+            child.material = (child.userData.originalMaterial as THREE.Material).clone();
+            child.material.opacity = 0.05;  // 5%不透明度（95%透明）
+            child.material.transparent = true;
+            child.material.depthWrite = false;
+          } else {
+            // 地板：正常显示
+            child.material = child.userData.originalMaterial;
+          }
+        }
+      }
+    } else {
+      // 三楼模式：一二楼墙体高度透明，三楼墙体透明25%，所有楼梯显示
+      child.visible = true;
+      
+      if (isStaircase) {
+        // 所有楼梯：正常显示
+        if (child instanceof THREE.Mesh && child.userData.originalMaterial) {
+          child.material = child.userData.originalMaterial;
+        }
+      }
+      // 一楼
+      else if (y < 4) {
+        if (child instanceof THREE.Mesh && child.userData.originalMaterial) {
+          if (!isFloor && y > 0.1) {
+            // 一楼墙体：高度透明
+            child.material = (child.userData.originalMaterial as THREE.Material).clone();
+            child.material.opacity = 0.05;  // 5%不透明度
+            child.material.transparent = true;
+            child.material.depthWrite = false;
+          } else {
+            // 地板：正常显示
+            child.material = child.userData.originalMaterial;
+          }
+        }
+      }
+      // 二楼
+      else if (y >= 4 && y < 8) {
+        if (child instanceof THREE.Mesh && child.userData.originalMaterial) {
+          if (!isFloor && y > 4.1) {
+            // 二楼墙体：透明25%
+            child.material = (child.userData.originalMaterial as THREE.Material).clone();
+            child.material.opacity = 0.25;
+            child.material.transparent = true;
+            child.material.depthWrite = false;
+          } else {
+            // 地板：正常显示
+            child.material = child.userData.originalMaterial;
+          }
+        }
+      }
+      // 三楼
+      else if (y >= 8) {
+        if (child instanceof THREE.Mesh && child.userData.originalMaterial) {
+          if (!isFloor && y > 8.1) {
+            // 三楼房间墙体：透明25%
+            child.material = (child.userData.originalMaterial as THREE.Material).clone();
+            child.material.opacity = 0.25;
+            child.material.transparent = true;
+            child.material.depthWrite = false;
+          } else {
+            // 地板：正常显示
+            child.material = child.userData.originalMaterial;
+          }
+        }
+      }
+    }
+  });
+}
+
+function resetVisibility() {
+  if (!buildingModel) return;
+  
+  // 恢复所有元素可见和原始材质
+  buildingModel.traverse((child) => {
+    child.visible = true;
+    if (child instanceof THREE.Mesh && child.userData.originalMaterial) {
+      child.material = child.userData.originalMaterial;
     }
   });
 }

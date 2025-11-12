@@ -14,6 +14,7 @@ export class Staircase {
     color: number = 0xb5aa94
   ) {
     this.group = new THREE.Group();
+    this.group.name = 'Staircase';
     this.createSteps(width, height, depth, steps, color);
     this.createHandrails(width, height, depth, color);
   }

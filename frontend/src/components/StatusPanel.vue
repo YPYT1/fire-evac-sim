@@ -31,7 +31,7 @@
         <strong>{{ ((store.stats.fire_decay ?? 0) * 100).toFixed(1) }}%</strong>
       </li>
       <li>
-        <span>疑散进度</span>
+        <span>疏散进度</span>
         <strong>{{ evacuationProgress.toFixed(1) }}%</strong>
       </li>
       <li class="floor-distribution">

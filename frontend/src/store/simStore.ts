@@ -55,17 +55,14 @@ export const useSimStore = defineStore('sim', () => {
       fires.value = msg.fires as FireSource[];
       paths.value = (msg.paths as number[][][]) ?? [];
       if (msg.stats) {
-        stats.value = msg.stats;
+        stats.value = {
+          ...msg.stats,
+          speed_mean: msg.stats.speed_mean ?? stats.value.speed_mean ?? 0,
+          speed_std: msg.stats.speed_std ?? stats.value.speed_std ?? 0,
+          fire_decay: msg.stats.fire_decay ?? stats.value.fire_decay ?? 0,
+        };
         if (typeof msg.tick_hz === 'number') {
           tickHz.value = msg.tick_hz;
-        }
-        if (!msg.stats.speed_mean) {
-          stats.value = {
-            ...stats.value,
-            speed_mean: stats.value.speed_mean ?? 0,
-            speed_std: stats.value.speed_std ?? 0,
-            fire_decay: stats.value.fire_decay ?? 0,
-          };
         }
       }
     }
