@@ -29,7 +29,7 @@ export function updatePaths(group: THREE.Group, paths: number[][][]): void {
   disposeChildren(group);
   ensureResolutionWatcher();
 
-  paths.forEach((path, index) => {
+  paths.forEach((path) => {
     if (!Array.isArray(path) || path.length < 2) {
       return;
     }

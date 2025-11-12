@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { Room, type DoorConfig } from './Room';
 import { Staircase } from './Staircase';
 import { Wall } from './Wall';
-import layoutConfig from '../layoutConfig.json';
+import { layoutConfig, type LayoutConfig, type LayoutFloorConfig } from '../layoutConfig';
 
 interface SeatingConfig {
   spacingX: number;
@@ -13,33 +13,7 @@ interface SeatingConfig {
   excludedZones?: Array<{ x: number; z: number; halfWidth: number; halfDepth: number }>;
 }
 
-interface SideRoomConfig {
-  side: 'east' | 'west';
-  width: number;
-  depth: number;
-  offsetZ?: number;
-  offsetX?: number;
-  doorWidth?: number;
-  doorHeight?: number;
-  doorOffset?: number;
-}
-
-interface FloorLayout {
-  level: number;
-  includeOuterWalls: boolean;
-  cornerRooms: boolean;
-  seating?: SeatingConfig;
-  sideRoom?: SideRoomConfig;
-}
-
-interface LayoutFile {
-  stairs?: {
-    westEnabled?: boolean;
-    eastEnabled?: boolean;
-    southEnabled?: boolean;
-  };
-  floors: FloorLayout[];
-}
+type FloorLayout = LayoutFloorConfig;
 
 /**
  * 三层食堂模型，尺寸 60m × 60m，每层 4m 高。
@@ -61,11 +35,11 @@ export class Canteen {
   private readonly wallColor = 0xe8d5b7;
 
   private readonly floorLayouts: FloorLayout[];
-  private readonly stairVisibility: Required<NonNullable<LayoutFile['stairs']>>;
+  private readonly stairVisibility: LayoutConfig['stairs'];
 
   constructor() {
     this.group = new THREE.Group();
-    const meta = (layoutConfig as LayoutFile) ?? { floors: [] };
+    const meta = layoutConfig;
     this.stairVisibility = {
       westEnabled: meta.stairs?.westEnabled !== false,
       eastEnabled: meta.stairs?.eastEnabled !== false,
@@ -297,9 +271,20 @@ export class Canteen {
     this.group.add(southeast.getGroup());
   }
 
-  private createSideRoom(floorY: number, config: SideRoomConfig): void {
+  private createSideRoom(floorY: number, config: NonNullable<LayoutFloorConfig['sideRoom']>): void {
+    let doorWall: DoorConfig['wall'];
+    if (config.side === 'east') {
+      doorWall = 'left';
+    } else if (config.side === 'west') {
+      doorWall = 'right';
+    } else if (config.side === 'south') {
+      doorWall = 'front';
+    } else {
+      doorWall = 'back';
+    }
+
     const door: DoorConfig = {
-      wall: config.side === 'east' ? 'left' : 'right',
+      wall: doorWall,
       width: config.doorWidth ?? this.doorWidth,
       height: config.doorHeight ?? this.doorHeight,
       offset: config.doorOffset ?? 0,
@@ -314,11 +299,32 @@ export class Canteen {
     );
     const offsetX = config.offsetX ?? 0;
     const offsetZ = config.offsetZ ?? 0;
-    const x =
-      config.side === 'east'
-        ? this.totalWidth / 2 - config.width / 2 - this.wallThickness + offsetX
-        : -this.totalWidth / 2 + config.width / 2 + this.wallThickness + offsetX;
-    room.setPosition(x, floorY, offsetZ);
+    let x = 0;
+    let z = 0;
+
+    if (config.side === 'east' || config.side === 'west') {
+      // 东西侧房间：使用 centerX 或自动计算
+      if (typeof config.centerX === 'number') {
+        x = config.centerX + offsetX;
+      } else if (config.side === 'east') {
+        x = this.totalWidth / 2 - config.width / 2 - this.wallThickness + offsetX;
+      } else {
+        x = -this.totalWidth / 2 + config.width / 2 + this.wallThickness + offsetX;
+      }
+      z = typeof config.centerZ === 'number' ? config.centerZ + offsetZ : offsetZ;
+    } else {
+      // 南北侧房间：使用 centerZ 或自动计算
+      x = typeof config.centerX === 'number' ? config.centerX + offsetX : offsetX;
+      if (typeof config.centerZ === 'number') {
+        z = config.centerZ + offsetZ;
+      } else if (config.side === 'south') {
+        z = -this.totalDepth / 2 + config.depth / 2 + this.wallThickness + offsetZ;
+      } else {
+        z = this.totalDepth / 2 - config.depth / 2 - this.wallThickness + offsetZ;
+      }
+    }
+
+    room.setPosition(x, floorY, z);
     this.group.add(room.getGroup());
   }
 
@@ -535,6 +541,7 @@ export class Canteen {
       holeZ?: number;
       holeWidth?: number;
       holeDepth?: number;
+      side?: 'west' | 'east' | 'south';
     };
     const offsetX = this.totalWidth / 2 - 7;
     const sharedBaseLevels = [0, this.wallHeight];

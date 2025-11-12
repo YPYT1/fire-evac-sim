@@ -86,14 +86,14 @@ floors:
       - east_stair
     spawn_regions:
       - id: f3_open_core
-        rect: [14, 20, 28, 20]
+        rect: [16, 18, 28, 24]
       - id: f3_side_room
-        rect: [48, 18, 8, 24]
+        rect: [4, 12, 12, 36]
     fire_zones:
       - id: f3_open_zone
         rect: [18, 22, 24, 18]
       - id: f3_room_zone
-        rect: [48, 20, 8, 20]
+        rect: [4, 16, 12, 30]
     agent_ratio: 0.2
     spawn_scatter_radius: 5
     fire_min_spacing: 5
