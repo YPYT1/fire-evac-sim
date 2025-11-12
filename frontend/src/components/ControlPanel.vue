@@ -1,5 +1,11 @@
 <template>
   <section class="panel">
+    <ToastNotification
+      :message="toastMessage"
+      :type="toastType"
+      :visible="showToast"
+      @close="showToast = false"
+    />
     <h2>控制面板</h2>
     <form class="form" @submit.prevent="onStart">
       <label class="form__field">
@@ -60,6 +66,7 @@ import { ref, computed } from 'vue';
 import { useSimStore } from '../store/simStore';
 import { openSimulationSocket, startSimulation, stopSimulation } from '../api/client';
 import { floorColorHex } from '../constants/pathPalette';
+import ToastNotification from './ToastNotification.vue';
 
 const store = useSimStore();
 const mode = computed({
@@ -82,6 +89,9 @@ const crowdRadius = ref(1.45);
 const crowdGain = ref(1.25);
 const crowdPush = ref(0.6);
 const starting = ref(false);
+const showToast = ref(false);
+const toastMessage = ref('');
+const toastType = ref<'success' | 'error' | 'warning' | 'info'>('info');
 let socket: WebSocket | null = null;
 
 const isRunning = computed(() => !!store.sessionId);
@@ -111,6 +121,10 @@ async function onStart() {
     store.tickHz = response.tick_hz;
     store.setMode(mode.value);
     connectSocket(response.session_id);
+  } catch (error) {
+    console.error('启动仿真失败', error);
+    const message = error instanceof Error ? error.message : String(error);
+    showToastNotification(`启动仿真失败：${message}`, 'error');
   } finally {
     starting.value = false;
   }
@@ -130,6 +144,18 @@ function connectSocket(sessionId: string) {
   socket = openSimulationSocket(sessionId, (message) => {
     store.applySocketMessage(message);
   });
+  socket.onopen = () => {
+    showToastNotification('仿真已启动', 'success');
+  };
+  socket.onerror = () => {
+    showToastNotification('WebSocket 连接失败，请检查后端服务', 'error');
+  };
+}
+
+function showToastNotification(message: string, type: 'success' | 'error' | 'warning' | 'info') {
+  toastMessage.value = message;
+  toastType.value = type;
+  showToast.value = true;
 }
 </script>
 

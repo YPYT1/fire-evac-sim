@@ -54,7 +54,16 @@ export async function startSimulation(payload: SimStartPayload): Promise<SimStar
     body: JSON.stringify(payload),
   });
   if (!res.ok) {
-    throw new Error(`startSimulation failed: ${res.statusText}`);
+    let errorMessage = `后端返回 ${res.status}: ${res.statusText}`;
+    try {
+      const errorData = await res.json();
+      if (errorData.detail) {
+        errorMessage += ` - ${JSON.stringify(errorData.detail)}`;
+      }
+    } catch {
+      // 无法解析错误响应，使用默认消息
+    }
+    throw new Error(errorMessage);
   }
   return res.json();
 }
@@ -82,11 +91,32 @@ export type WebSocketMessage =
   | { type: 'end' | 'error'; reason?: string };
 
 export function openSimulationSocket(sessionId: string, onMessage: (msg: WebSocketMessage) => void): WebSocket {
-  const ws = new WebSocket(`${BASE_URL.replace('http', 'ws')}/ws/sim/${sessionId}`);
+  const wsUrl = buildWebSocketUrl(`/ws/sim/${sessionId}`);
+  const ws = new WebSocket(wsUrl);
   ws.onmessage = (event) => {
-    onMessage(JSON.parse(event.data));
+    try {
+      onMessage(JSON.parse(event.data));
+    } catch (error) {
+      console.error('WebSocket 消息解析失败：', error);
+    }
+  };
+  ws.onerror = (event) => {
+    console.error('WebSocket 连接错误：', event);
   };
   return ws;
+}
+
+function buildWebSocketUrl(path: string): string {
+  try {
+    const url = new URL(BASE_URL, window.location.origin);
+    url.protocol = url.protocol === 'https:' ? 'wss:' : 'ws:';
+    url.pathname = url.pathname.replace(/\/$/, '') + path;
+    return url.toString();
+  } catch (error) {
+    // 回退方案：简单替换
+    console.warn('WebSocket URL 构造失败，使用简单替换方案', error);
+    return `${BASE_URL.replace(/^http/, 'ws').replace(/\/$/, '')}${path}`;
+  }
 }
 
 export async function replanSimulation(payload: SimReplanPayload): Promise<void> {

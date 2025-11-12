@@ -21,6 +21,7 @@ let pathGroup: THREE.Group | null = null;
 let fireManager: FireParticleManager | null = null;
 let fireFallbackGroup: THREE.Group | null = null;
 let lastTime = 0;
+let buildingModel: THREE.Group | null = null;
 
 const store = useSimStore();
 
@@ -67,8 +68,8 @@ onMounted(async () => {
   bundle.scene.add(pathGroup);
 
   try {
-    const building = await loadBuilding();
-    bundle.scene.add(building);
+    buildingModel = await loadBuilding();
+    bundle.scene.add(buildingModel);
   } catch (error) {
     console.warn('加载建筑模型失败：', error);
   }
@@ -106,8 +107,96 @@ onMounted(async () => {
     { immediate: true }
   );
 
+  watch(
+    () => store.mode,
+    (mode) => {
+      updateFloorVisibility(mode);
+      adjustCameraForFloor(mode);
+    },
+    { immediate: false }
+  );
+
   animate();
 });
+
+function updateFloorVisibility(mode: 'floor1' | 'floor2' | 'floor3') {
+  if (!buildingModel || !bundle) return;
+
+  // 根据模式设置楼层可见性
+  buildingModel.traverse((child) => {
+    if (child instanceof THREE.Mesh || child instanceof THREE.Group) {
+      const position = child.position;
+      const y = position.y;
+
+      // 根据 Y 坐标判断楿层
+      if (mode === 'floor1') {
+        // 一层模式：隐藏二三层
+        child.visible = y < 4.5;
+      } else if (mode === 'floor2') {
+        // 二层模式：隐藏三层，淡化一层
+        if (y >= 8) {
+          child.visible = false;
+        } else {
+          child.visible = true;
+          if (child instanceof THREE.Mesh && child.material) {
+            const mat = child.material as THREE.Material;
+            if (y < 1) {
+              mat.opacity = 0.3;
+              mat.transparent = true;
+            } else {
+              mat.opacity = 1;
+            }
+          }
+        }
+      } else {
+        // 三层模式：淡化一二层
+        child.visible = true;
+        if (child instanceof THREE.Mesh && child.material) {
+          const mat = child.material as THREE.Material;
+          if (y < 6) {
+            mat.opacity = 0.25;
+            mat.transparent = true;
+          } else {
+            mat.opacity = 1;
+          }
+        }
+      }
+    }
+  });
+}
+
+function adjustCameraForFloor(mode: 'floor1' | 'floor2' | 'floor3') {
+  if (!bundle) return;
+
+  const camera = bundle.camera;
+  const controls = bundle.controls;
+
+  // 根据楼层调整相机高度和目标点
+  const targetY = mode === 'floor1' ? 2 : mode === 'floor2' ? 6 : 10;
+  const cameraY = mode === 'floor1' ? 60 : mode === 'floor2' ? 65 : 75;
+
+  // 平滑过渡
+  const duration = 800;
+  const startY = camera.position.y;
+  const startTargetY = controls.target.y;
+  const startTime = performance.now();
+
+  function animateCamera(time: number) {
+    const elapsed = time - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3); // ease-out-cubic
+
+    camera.position.y = startY + (cameraY - startY) * eased;
+    controls.target.y = startTargetY + (targetY - startTargetY) * eased;
+    controls.update();
+
+    if (progress < 1) {
+      requestAnimationFrame(animateCamera);
+    }
+  }
+
+  requestAnimationFrame(animateCamera);
+}
 
 onBeforeUnmount(() => {
   cancelAnimationFrame(frameId);

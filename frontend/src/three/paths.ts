@@ -7,6 +7,9 @@ import { classifyFloorByHeight, getFloorColor, type FloorBand } from '../constan
 const pathResolution = new THREE.Vector2(1, 1);
 let resolutionWatcherBound = false;
 
+// 性能优化：限制最大路径渲染数量
+const MAX_PATHS_TO_RENDER = 300;
+
 function refreshResolution(): void {
   if (typeof window === 'undefined') return;
   pathResolution.set(window.innerWidth || 1, window.innerHeight || 1);
@@ -29,7 +32,16 @@ export function updatePaths(group: THREE.Group, paths: number[][][]): void {
   disposeChildren(group);
   ensureResolutionWatcher();
 
-  paths.forEach((path) => {
+  // 性能优化：限制路径数量，优先渲染最后的路径（最近添加的代理）
+  const pathsToRender = paths.length > MAX_PATHS_TO_RENDER 
+    ? paths.slice(-MAX_PATHS_TO_RENDER) 
+    : paths;
+
+  if (paths.length > MAX_PATHS_TO_RENDER) {
+    console.warn(`路径数量（${paths.length}）超过最大限制（${MAX_PATHS_TO_RENDER}），仅渲染最近的 ${MAX_PATHS_TO_RENDER} 条`);
+  }
+
+  pathsToRender.forEach((path) => {
     if (!Array.isArray(path) || path.length < 2) {
       return;
     }
